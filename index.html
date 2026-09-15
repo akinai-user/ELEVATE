@@ -8,8 +8,7 @@
       name="description"
       content="人材事業とDX事業を通じて、人とテクノロジーの可能性をつなぐELEVATEの公式サイトです。"
     />
-    <link rel="preload" as="image" href="images/top/hero-background.webp" media="(min-width: 768px)" fetchpriority="high" />
-    <link rel="preload" as="image" href="images/top/hero-background-sp.webp" media="(max-width: 767px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="images/top/hero-slide-01.webp" fetchpriority="high" />
     <link rel="stylesheet" href="commn/css/common.css" />
     <link rel="stylesheet" href="commn/css/site-shell.css" />
     <link rel="stylesheet" href="commn/vendor/swiper/swiper-bundle.min.css" />
@@ -101,7 +100,27 @@
               テクノロジーと人の可能性をつなぎ、<br />すべての人がやりがいを持って働ける社会を実現する。
             </p>
           </div>
-          <div class="hero__visual" aria-hidden="true"></div>
+          <div class="hero__visual" data-hero-slider>
+            <div class="hero-slider__images" aria-hidden="true">
+              <img class="hero-slider__image is-active" src="images/top/hero-slide-01.webp" alt="" width="1906" height="825" fetchpriority="high" decoding="async" />
+              <img class="hero-slider__image" src="images/top/hero-slide-02.webp" alt="" width="1906" height="825" decoding="async" />
+              <img class="hero-slider__image" src="images/top/hero-slide-03.webp" alt="" width="1906" height="825" decoding="async" />
+            </div>
+            <div class="hero-pagination" aria-label="メインビジュアル切り替え">
+              <button class="hero-pagination__button is-active" type="button" aria-label="1枚目を表示" aria-current="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle class="hero-pagination__track" cx="12" cy="12" r="10" /><circle class="hero-pagination__progress" cx="12" cy="12" r="10" pathLength="1" /></svg>
+                <span></span>
+              </button>
+              <button class="hero-pagination__button" type="button" aria-label="2枚目を表示">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle class="hero-pagination__track" cx="12" cy="12" r="10" /><circle class="hero-pagination__progress" cx="12" cy="12" r="10" pathLength="1" /></svg>
+                <span></span>
+              </button>
+              <button class="hero-pagination__button" type="button" aria-label="3枚目を表示">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle class="hero-pagination__track" cx="12" cy="12" r="10" /><circle class="hero-pagination__progress" cx="12" cy="12" r="10" pathLength="1" /></svg>
+                <span></span>
+              </button>
+            </div>
+          </div>
           <div data-reveal class="hero__buttons">
             <a class="pill pill--solid" href="contact/index.html"
               >企業のご担当者様へ <span>→</span></a

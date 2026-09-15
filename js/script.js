@@ -3,6 +3,63 @@
 (() => {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+  const initHeroSlider = () => {
+    const slider = document.querySelector("[data-hero-slider]");
+    if (!slider) return;
+
+    const slides = [...slider.querySelectorAll(".hero-slider__image")];
+    const buttons = [...slider.querySelectorAll(".hero-pagination__button")];
+    if (slides.length < 2 || slides.length !== buttons.length) return;
+
+    const interval = 5000;
+    let current = 0;
+    let timer;
+
+    const activate = (index) => {
+      current = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => slide.classList.toggle("is-active", slideIndex === current));
+      buttons.forEach((button, buttonIndex) => {
+        const active = buttonIndex === current;
+        button.classList.toggle("is-active", active);
+        if (active) button.setAttribute("aria-current", "true");
+        else button.removeAttribute("aria-current");
+        if (active) {
+          button.classList.remove("is-active");
+          void button.offsetWidth;
+          button.classList.add("is-active");
+        }
+      });
+    };
+
+    const stop = () => window.clearTimeout(timer);
+    const schedule = () => {
+      stop();
+      if (reducedMotion.matches || document.hidden) return;
+      timer = window.setTimeout(() => {
+        activate(current + 1);
+        schedule();
+      }, interval);
+    };
+
+    buttons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        activate(index);
+        schedule();
+      });
+    });
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) activate(current);
+      schedule();
+    });
+    reducedMotion.addEventListener("change", () => {
+      activate(current);
+      schedule();
+    });
+
+    activate(0);
+    schedule();
+  };
+
   const initInterviewSlider = () => {
     const carousel = document.querySelector(".interview-slider");
     if (!carousel || !window.Swiper) return;
@@ -145,6 +202,7 @@
     });
   };
 
+  initHeroSlider();
   initInterviewSlider();
   initInterviewModal();
   initBackToTop();
