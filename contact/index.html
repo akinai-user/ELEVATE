@@ -3,11 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>企業向けお問い合わせ | ELEVATE</title>
-  <meta name="description" content="ELEVATEの企業向けお問い合わせページです。">
+  <title>企業ご担当者様のお問い合わせ | ELEVATE</title>
+  <meta name="description" content="ELEVATEの企業ご担当者様のお問い合わせをご紹介します。">
+  <script src="../commn/js/common.js" defer></script>
   <link rel="stylesheet" href="../commn/css/common.css">
   <link rel="stylesheet" href="../commn/css/site-shell.css">
-  <script src="../commn/js/common.js" defer></script>
+  <link rel="stylesheet" href="../service/css/style.css">
+  <link rel="stylesheet" href="../commn/css/renewal.css">
+  <link rel="stylesheet" href="css/style.css">
+<script src="js/form.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へスキップ</a>
@@ -38,15 +42,61 @@
       </div>
     </div>
   </header>
-  <nav class="breadcrumb" aria-label="パンくずリスト">
-    <ol class="breadcrumb__list">
-      <li class="breadcrumb__item"><a class="hover-underline" href="../index.html">HOME</a></li>
-      <li class="breadcrumb__item"><span aria-current="page">企業向けお問い合わせ</span></li>
-    </ol>
-  </nav>
-  <main id="main" class="container page-main">
-    <h1>企業向けお問い合わせ</h1>
-    <!-- TODO: このページ固有のコンテンツを実装してください。 -->
+  <nav class="breadcrumb" aria-label="パンくずリスト"><ol class="breadcrumb__list"><li class="breadcrumb__item"><a class="hover-underline" href="../index.html">HOME</a></li><li class="breadcrumb__item"><span aria-current="page">企業ご担当者様のお問い合わせ</span></li></ol></nav>
+  <main id="main" class="service-page renewal-page">
+    <section class="dx-hero renewal-hero " aria-labelledby="page-title"><span class="dx-orb dx-orb--01" aria-hidden="true"></span><span class="dx-orb dx-orb--02" aria-hidden="true"></span><span class="dx-orb dx-orb--03" aria-hidden="true"></span><span class="dx-orb dx-orb--04" aria-hidden="true"></span>
+      <div class="renewal-hero__inner">
+        <div class="renewal-hero__copy" data-reveal>
+          <p class="renewal-eyebrow">Contact</p>
+          <h1 id="page-title">企業ご担当者様のお問い合わせ</h1>
+          <p class=renewal-hero__description>企業ご担当者様からのお問い合わせをお待ちしております。人材派遣・システムエンジニアリングサービスに関するご相談やお見積もりなど、お気軽にお問い合わせください。</p>
+        </div>
+        <div class="renewal-hero__visual" aria-hidden="true">
+          <p class="renewal-signature">働くその先へ</p>
+          <p>人と技術で、<br>企業の未来をアップデート。</p><small>FOR A BRIGHTER<br>TOMORROW</small>
+        </div>
+      </div>
+    </section>
+    <div class="renewal-content">
+      <form id="contact-form" class="renewal-form" method="dialog">
+        <div class="renewal-form__row"><label for="contact-name"><span>ご担当者名</span><span class="renewal-required">必須</span></label>
+          <div><input class="form__input form__input--min" type="text" name="name" placeholder="例）山田太郎" value="" id="contact-name" required data-label="ご担当者名" autocomplete="name">
+          </div>
+        </div>
+        <div class="renewal-form__row"><label for="contact-company"><span>企業名</span><span class="renewal-required">必須</span></label>
+          <div><input class="form__input form__input--long" type="text" name="company" placeholder="例）株式会社サンプル" value="" id="contact-company" required data-label="企業名" autocomplete="organization">
+          </div>
+        </div>
+        <div class="renewal-form__row"><label for="contact-email"><span>メールアドレス</span><span class="renewal-required">必須</span></label>
+          <div><input class="form__input" type="email" name="email" placeholder="例）example@example.com" value="" id="contact-email" required data-label="メールアドレス" autocomplete="email">
+          </div>
+        </div>
+        <div class="renewal-form__row"><label for="contact-email_chk"><span>確認用<br>メールアドレス</span><span class="renewal-required">必須</span></label>
+          <div><input class="form__input" type="email" name="email_chk" placeholder="例）example@example.com" value="" id="contact-email_chk" required data-label="確認用メールアドレス">
+          </div>
+        </div>
+        <div class="renewal-form__row"><label for="contact-tel"><span>電話番号</span><span class="renewal-required">必須</span></label>
+          <div><input class="form__input" type="tel" name="tel" placeholder="例）09012345678" value="" id="contact-tel" required data-label="電話番号" autocomplete="tel">
+          </div>
+        </div>
+        <div class="renewal-form__row"><label for="contact-message"><span>お問い合わせ<br>内容</span><span class="renewal-required">必須</span></label>
+          <div><textarea class="form__textarea" placeholder="お問い合わせ内容を入力してください" name="message" id="contact-message" required data-label="お問い合わせ内容"></textarea>
+          </div>
+        </div>
+        <div class="renewal-consent">
+          <p>個人情報の取り扱いについて<a href="../privacy/index.html" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>をご確認頂き、同意の上送信してください。</p><label><input type="checkbox" name="policy_chk" required>同意する</label>
+        </div><button class="renewal-button" type="submit">確認画面へ進む <span aria-hidden="true">→</span></button><noscript>
+          <p>入力内容を確認するにはJavaScriptを有効にしてください。</p></noscript>
+      </form>
+    </div>
+    <dialog class="renewal-dialog" id="contact-confirmation" aria-labelledby="confirmation-title">
+      <h2 id="confirmation-title">お問い合わせ内容の確認</h2>
+      <dl id="contact-summary">
+      </dl>
+      <p class="renewal-dialog__note">現在は入力内容の確認のみご利用いただけます。お問い合わせはまだ送信されていません。</p>
+      <form method="dialog"><button class="renewal-button" autofocus>入力内容を修正する <span aria-hidden="true">←</span></button>
+      </form>
+    </dialog>
   </main>
   <footer class="top-footer">
     <div class="top-footer__inner">
@@ -59,7 +109,7 @@
       <div class="footer-column">
         <h2>サービス内容</h2>
         <a href="../service/staffing/index.html" class="hover-underline">・総合人材派遣サービス</a>
-        <a href="../service/engineering/index.html" class="hover-underline">・システムエンジニアリングサービス</a>
+        <a href="../service/dx/index.html" class="hover-underline">・IT・DX事業</a>
       </div>
       <div class="footer-column">
         <h2>お仕事紹介をご希望の方</h2>

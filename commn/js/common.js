@@ -111,8 +111,8 @@
         path: "staffing/index.html",
       },
       {
-        label: "システムエンジニアリングサービス",
-        path: "engineering/index.html",
+        label: "IT・DX事業",
+        path: "dx/index.html",
       },
     ];
     let wrapper;

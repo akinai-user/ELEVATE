@@ -24,10 +24,10 @@
 | 業務請負 | `/service/staffing/contract-work/` | `service/staffing/contract-work/index.html` |
 | 人材紹介 | `/service/staffing/recruitment-agency/` | `service/staffing/recruitment-agency/index.html` |
 | システムエンジニアリングサービス | `/service/engineering/` | `service/engineering/index.html` |
-| AI導入サービス AI-LINK | `/service/engineering/ai-link-merged.html` | `service/engineering/ai-link-merged.html` |
+| AI導入サービス AI-LINK | `/service/ai/` | `service/ai/index.html` |
 | お仕事紹介をご希望の方 | `/introduction/` | `introduction/index.html` |
 | 総合人材派遣サービス | `/introduction/staffing/` | `introduction/staffing/index.html` |
-| フリーランスエンジニア ELEVATE | `/lp/` | `lp/index.html` |
+| フリーランスエンジニア ELEVATE | `https://elevate-works.jp/lp/` | 外部の既存LPへ遷移 |
 | よくあるご質問 | `/introduction/faq/` | `introduction/faq/index.html` |
 | 登録スタッフの方 | `/registered/` | `registered/index.html` |
 | 前払い申請フォーム | `/advance-payment/` | `advance-payment/index.html` |
@@ -41,7 +41,7 @@
 
 各ページのディレクトリに `index.html` を配置しています。ページ固有のスタイルや処理が必要になった時点でCSS／JavaScriptを追加してください。TOP専用ファイルはルート直下の `css/style.css` と `js/script.js` です。
 
-AI-LINKのみ添付のURLを優先し、`service/engineering/ai-link-merged.html` としています。
+AI-LINKはサービス階層を揃え、`service/ai/index.html` としています。旧ファイルからは新しいURLへ転送します。
 
 前払い申請・交通費申請・LPはサイトマップのURLどおりルート直下です。メニュー上の親子関係とURLのディレクトリ階層は必ずしも一致しません。
 
