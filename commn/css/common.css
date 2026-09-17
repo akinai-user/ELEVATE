@@ -2,13 +2,13 @@
 
 /* 共通テンプレート：色・幅・余白 */
 :root {
-  --color-text: #1c2733;
-  --color-background: #fff;
-  --color-primary: #175393;
-  --content-width: 1120px;
+  --color-text: #292d33;
+  --color-background: #f8f9fb;
+  --color-primary: #217fae;
+  --content-width: 1240px;
 }
 *, *::before, *::after { box-sizing: border-box; }
-body { margin: 0; color: var(--color-text); background: var(--color-background); font-family: system-ui, -apple-system, "Noto Sans JP", sans-serif; font-size: 1rem; line-height: 1.8; overflow-wrap: anywhere; }
+body { margin: 0; color: var(--color-text); background: var(--color-background); font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; font-size: 1rem; line-height: 1.8; overflow-wrap: anywhere; }
 img { max-width: 100%; height: auto; vertical-align: middle; }
 button, input, select, textarea { font: inherit; }
 a { color: var(--color-primary); text-underline-offset: .2em; }
@@ -93,7 +93,7 @@ a.hover-underline[href]:focus-visible,
   transition: box-shadow 0.3s ease;
 }
 .top-header.is-scrolled {
-  box-shadow: 0 4px 24px rgb(8 6 53 / 10%);
+  box-shadow: 0 1px 0 rgb(41 45 51 / 10%);
 }
 html { scroll-padding-top: calc(var(--sticky-header-height, 80px) + 20px); }
 .skip-link { z-index: 100; }
@@ -107,67 +107,4 @@ html { scroll-padding-top: calc(var(--sticky-header-height, 80px) + 20px); }
   html { scroll-behavior: auto !important; }
   .hover-lift, .top-header { transition: none; }
   .hover-lift:hover, .hover-lift:focus-visible { transform: none; }
-}
-
-/* ページ全体で一枚の背景を共有。スクロール中も模様が途切れません。 */
-.page-art {
-  position: relative;
-  isolation: isolate;
-  --page-art-opacity: 0.65;
-}
-.page-art::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: url("../../images/common/section-background.png") center / cover no-repeat;
-  opacity: var(--page-art-opacity);
-}
-@media (max-width: 767px) {
-  .page-art { --page-art-opacity: 0.45; }
-  .page-art::before {
-    background-image: url("../../images/common/section-background-sp.png");
-  }
-}
-
-/* 6つの装飾画像を独立した周期・軌道で浮遊させる共通背景 */
-.floating-background {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-  pointer-events: none;
-  user-select: none;
-}
-.floating-background__orb {
-  position: absolute;
-  width: var(--orb-size);
-  height: auto;
-  opacity: var(--orb-opacity, 0.36);
-  animation: orb-drift var(--orb-duration, 19s) ease-in-out infinite;
-  animation-delay: var(--orb-delay, 0s);
-  will-change: transform;
-}
-.floating-background__orb:nth-child(1) { left: -3%; top: 13%; --orb-size: clamp(130px, 17vw, 250px); --orb-duration: 19s; --orb-delay: -4s; --orb-x: 24px; --orb-y: -32px; --orb-turn: 8deg; }
-.floating-background__orb:nth-child(2) { right: -4%; top: 45%; --orb-size: clamp(120px, 15vw, 220px); --orb-duration: 24s; --orb-delay: -13s; --orb-x: -30px; --orb-y: 24px; --orb-turn: -10deg; }
-.floating-background__orb:nth-child(3) { right: 15%; top: 15%; --orb-size: clamp(65px, 8vw, 120px); --orb-duration: 17s; --orb-delay: -7s; --orb-x: -18px; --orb-y: -28px; --orb-turn: 12deg; --orb-opacity: 0.42; }
-.floating-background__orb:nth-child(4) { left: 12%; top: 68%; --orb-size: clamp(70px, 9vw, 135px); --orb-duration: 22s; --orb-delay: -16s; --orb-x: 22px; --orb-y: 30px; --orb-turn: -7deg; }
-.floating-background__orb:nth-child(5) { left: -4%; top: 42%; --orb-size: clamp(95px, 12vw, 180px); --orb-duration: 26s; --orb-delay: -9s; --orb-x: 28px; --orb-y: -22px; --orb-turn: -12deg; }
-.floating-background__orb:nth-child(6) { right: 2%; top: 79%; --orb-size: clamp(110px, 14vw, 210px); --orb-duration: 21s; --orb-delay: -3s; --orb-x: -20px; --orb-y: -35px; --orb-turn: 9deg; --orb-opacity: 0.30; }
-@keyframes orb-drift {
-  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
-  35% { transform: translate3d(var(--orb-x), var(--orb-y), 0) rotate(var(--orb-turn)); }
-  70% { transform: translate3d(calc(var(--orb-x) * -0.5), calc(var(--orb-y) * 0.4), 0) rotate(calc(var(--orb-turn) * -0.5)); }
-}
-.is-loading .floating-background__orb,
-.menu-open .floating-background__orb,
-.modal-open .floating-background__orb { animation-play-state: paused; }
-@media (max-width: 767px) {
-  .floating-background__orb { width: calc(var(--orb-size) * 0.65); opacity: 0.25; }
-  .floating-background__orb:nth-child(3) { right: 4%; }
-  .floating-background__orb:nth-child(4) { left: 3%; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .floating-background__orb { animation: none; will-change: auto; }
 }

@@ -8,9 +8,14 @@
     if (!carousel || !window.Swiper) return;
 
     const slider = new window.Swiper(carousel, {
-      slidesPerView: 1.08,
-      spaceBetween: 14,
-      speed: reducedMotion.matches ? 0 : 500,
+      slidesPerView: 1.3,
+      centeredSlides: true,
+      initialSlide: 0,
+      loop: true,
+      spaceBetween: 18,
+      speed: reducedMotion.matches ? 0 : 700,
+      slideToClickedSlide: true,
+      watchSlidesProgress: true,
       watchOverflow: true,
       navigation: {
         prevEl: "[data-carousel-prev]",
@@ -28,17 +33,19 @@
         slideLabelMessage: "{{index}} / {{slidesLength}}",
       },
       breakpoints: {
-        768: { slidesPerView: 2, spaceBetween: 17 },
-        1024: { slidesPerView: 3, spaceBetween: 17 },
+        768: { slidesPerView: 3, spaceBetween: 34 },
+        1024: { slidesPerView: 3, spaceBetween: 48 },
       },
     });
 
     reducedMotion.addEventListener("change", () => {
-      slider.params.speed = reducedMotion.matches ? 0 : 500;
+      slider.params.speed = reducedMotion.matches ? 0 : 700;
     });
     carousel.addEventListener("focusin", (event) => {
       const slide = event.target.closest(".swiper-slide");
-      if (slide) slider.slideTo([...slider.slides].indexOf(slide));
+      if (!slide) return;
+      const originalIndex = Number(slide.dataset.swiperSlideIndex);
+      if (Number.isInteger(originalIndex)) slider.slideToLoop(originalIndex);
     });
   };
 

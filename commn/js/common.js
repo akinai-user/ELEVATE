@@ -18,8 +18,15 @@
         `${header.getBoundingClientRect().height}px`,
       );
     };
+    const hero = document.querySelector(".hero");
+    if (hero) document.documentElement.classList.add("has-scroll-hero");
     const syncShadow = () => {
       header.classList.toggle("is-scrolled", window.scrollY > 8);
+      if (hero) {
+        const visible = hero.getBoundingClientRect().bottom <= 0;
+        header.classList.toggle("is-visible", visible);
+        header.inert = !visible;
+      }
     };
 
     syncHeight();
@@ -27,6 +34,9 @@
     if ("ResizeObserver" in window) new ResizeObserver(syncHeight).observe(header);
     else window.addEventListener("resize", syncHeight);
     window.addEventListener("scroll", syncShadow, { passive: true });
+    window.addEventListener("resize", syncShadow);
+    window.addEventListener("pageshow", syncShadow);
+    if (hero && "ResizeObserver" in window) new ResizeObserver(syncShadow).observe(hero);
   };
 
   const initMenu = () => {

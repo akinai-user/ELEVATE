@@ -12,31 +12,15 @@
     <link rel="stylesheet" href="commn/css/site-shell.css" />
     <link rel="stylesheet" href="commn/vendor/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/loading.css" />
-    <script src="js/loading.js" defer></script>
+    <script>document.documentElement.classList.add("has-scroll-hero");</script>
     <script src="commn/js/common.js" defer></script>
     <script src="commn/vendor/swiper/swiper-bundle.min.js" defer></script>
     <script src="js/script.js" defer></script>
+    <script src="js/design-motion.js" defer></script>
   </head>
 
-  <body class="page-art">
+  <body class="home-page">
     <a class="skip-link" href="#main">本文へスキップ</a>
-    <div class="floating-background" aria-hidden="true">
-      <img class="floating-background__orb" src="images/common/floating-orb-01.png" alt="" width="1254" height="1254" decoding="async" />
-      <img class="floating-background__orb" src="images/common/floating-orb-02.png" alt="" width="1254" height="1254" decoding="async" />
-      <img class="floating-background__orb" src="images/common/floating-orb-03.png" alt="" width="1254" height="1254" decoding="async" />
-      <img class="floating-background__orb" src="images/common/floating-orb-04.png" alt="" width="1254" height="1254" decoding="async" />
-      <img class="floating-background__orb" src="images/common/floating-orb-05.png" alt="" width="1254" height="1254" decoding="async" />
-      <img class="floating-background__orb" src="images/common/floating-orb-06.png" alt="" width="1254" height="1254" decoding="async" />
-    </div>
-    <dialog class="loading-screen" id="loading-screen" aria-label="ELEVATE オープニング">
-      <canvas class="loading-screen__canvas" aria-hidden="true"></canvas>
-      <p class="loading-screen__message" aria-live="polite">人の力と技術力。働く未来を創造する。</p>
-      <div class="loading-screen__bottom">
-        <button class="loading-screen__skip" type="button" autofocus>SKIP <span aria-hidden="true">↗</span></button>
-      </div>
-      <div class="loading-screen__progress" aria-hidden="true"></div>
-    </dialog>
     <header class="top-header">
       <div class="top-header__inner">
         <a
@@ -66,12 +50,12 @@
         </nav>
         <div class="header-actions">
           <a
-            class="header-button hover-fade"
+            class="header-button"
             href="contact/index.html"
             >お問い合わせ <span>→</span></a
           >
           <a
-            class="header-button header-button--solid hover-fade"
+            class="header-button header-button--solid"
             href="web-registered/index.html"
             >かんたんWeb登録 <span>→</span></a
           >
@@ -90,65 +74,13 @@
     </header>
 
     <main id="main">
-      <section class="hero">
-        <div class="hero__inner">
-          <div data-reveal class="hero__copy">
-            <p class="eyebrow">PEOPLE × TECHNOLOGY</p>
-            <h1>人の力と技術力。<br />働く<span>未来を創造</span>する。</h1>
-            <p class="hero__lead">
-              テクノロジーと人の可能性をつなぎ、<br />すべての人がやりがいを持って働ける社会を実現する。
-            </p>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__stage">
+          <div class="hero__sky" aria-hidden="true">
+            <img src="images/top/elevate/sky-blue.jpg" alt="" width="2400" height="1188" fetchpriority="high" decoding="async" />
           </div>
-          <div class="hero__visual" aria-hidden="true"></div>
-          <div data-reveal class="hero__buttons">
-            <a class="pill pill--solid" href="contact/index.html"
-              >企業のご担当者様へ <span>→</span></a
-            ><a class="pill" href="introduction/index.html"
-              >お仕事をお探しの方へ <span>→</span></a
-            >
-          </div>
-        </div>
-        <a
-          class="scroll-cue"
-          href="#service"
-          aria-label="サービス内容までスクロール"
-          ><b><img src="images/top/scroll-cue.png" alt="" /></b
-          ><span>SCROLL</span></a
-        >
-      </section>
-      <section class="section service" id="service">
-        <div class="section__inner">
-          <div data-reveal class="section-heading section-heading--split">
-            <div>
-              <p class="eyebrow">SERVICE</p>
-              <h2>サービス内容</h2>
-            </div>
-            <p class="section-heading__copy">
-              企業の成長と、はたらく人のキャリアを支援する<br />テクノロジー×人の力で実現します。
-            </p>
-            <a class="text-link hover-trigger" href="service/index.html"
-              ><span class="hover-underline">サービス一覧を見る</span>
-              <span aria-hidden="true">→</span></a
-            >
-          </div>
-          <div class="service-grid">
-            <article data-reveal class="service-card hover-lift">
-              <a href="service/staffing/index.html" class="hover-image">
-                <img
-                  src="images/top/service-card-01.png"
-                  alt="人材事業（アウトソーシング）—企業の業務課題に応じ、人材提供から常駐運営まで一括して支援します。"
-                />
-              </a>
-            </article>
-            <article data-reveal class="service-card hover-lift">
-              <a href="service/engineering/index.html" class="hover-image">
-                <img
-                  src="images/top/service-card-02.png"
-                  alt="DX事業—市場や顧客ニーズに基づき、新たなサービスやソリューションの企画・開発・事業化を支援します。"
-                />
-              </a>
-            </article>
-          </div>
+          <h1 id="hero-title" class="hero__title"><span>人の力と技術力。</span><span>働く未来を創造する。</span></h1>
+          <a class="hero__scroll" href="#news" aria-label="新着情報へスクロール"><span aria-hidden="true">↓</span></a>
         </div>
       </section>
       <section class="section news" id="news">
@@ -187,50 +119,71 @@
           </aside>
         </div>
       </section>
+      <section class="section service" id="service">
+        <div class="service-backdrop" aria-hidden="true"><div></div><div></div></div>
+        <div class="section__inner">
+          <div data-reveal class="section-heading section-heading--split">
+            <div>
+              <p class="eyebrow">SERVICE</p>
+              <h2>サービス内容</h2>
+            </div>
+            <p class="section-heading__copy">
+              企業の成長と、はたらく人のキャリアを支援する<br />テクノロジー×人の力で実現します。
+            </p>
+            <a class="text-link hover-trigger" href="service/index.html"
+              ><span class="hover-underline">サービス一覧を見る</span>
+              <span aria-hidden="true">→</span></a
+            >
+          </div>
+          <div class="service-grid">
+            <article data-reveal class="service-card">
+              <a href="service/staffing/index.html" class="service-card__link" aria-label="人材事業（アウトソーシング）—企業の業務課題に応じ、人材提供から常駐運営まで一括して支援します。">
+                <div class="service-card__heading"><span class="card-number">01</span><h3>人材事業<small>（アウトソーシング）</small></h3></div>
+                <div class="service-card__photo service-card__photo--01" aria-hidden="true"></div>
+                <div class="service-card__body"><p>企業の業務課題に応じた<br />人材の提供から常駐運営まで<br />を一括して支援する<br />アウトソーシングサービスです。</p><span class="card-link">詳しく見る <span aria-hidden="true">→</span></span></div>
+                <p class="service-card__english">OUTSOURCING</p>
+              </a>
+            </article>
+            <article data-reveal class="service-card">
+              <a href="service/engineering/index.html" class="service-card__link" aria-label="DX事業—市場や顧客ニーズに基づき、新たなサービスやソリューションの企画・開発・事業化を支援します。">
+                <div class="service-card__heading"><span class="card-number">02</span><h3>DX事業<small></small></h3></div>
+                <div class="service-card__photo service-card__photo--02" aria-hidden="true"></div>
+                <div class="service-card__body"><p>市場や顧客ニーズに基づき、<br />新たなサービスやソリューション<br />を企画・開発・事業化まで<br />を支援します。</p><span class="card-link">詳しく見る <span aria-hidden="true">→</span></span></div>
+                <p class="service-card__english">DIGITAL TRANSFORMATION</p>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
       <section class="section seekers">
         <div class="section__inner">
           <div
             data-reveal
-            class="section-heading section-heading--split section-heading--compact"
+            class="section-heading section-heading--compact"
           >
             <div>
               <p class="eyebrow">FOR JOB SEEKERS</p>
               <h2>お仕事紹介をご希望の方へ</h2>
             </div>
-            <p class="section-heading__copy">
-              あなたのキャリアに、新しい可能性を。
-            </p>
           </div>
-          <div class="seekers-grid">
-            <a
-              data-reveal
-              class="seeker-card hover-image hover-lift"
-              href="introduction/index.html"
-            >
-              <img
-                src="images/top/seeker-card-01.png"
-                alt="お仕事紹介をご希望の方—あなたに合ったお仕事をご紹介します。"
-              />
+          <div class="seekers-grid is-interactive">
+            <a class="seeker-card" href="introduction/index.html">
+              <span class="card-number">01</span>
+              <div class="seeker-card__illustration seeker-card__illustration--01" aria-hidden="true"></div>
+              <h3>お仕事紹介をご希望の方</h3><p>あなたに合ったお仕事をご紹介します。</p>
+              <span class="card-link">詳しく見る <span aria-hidden="true">→</span></span>
             </a>
-            <a
-              data-reveal
-              class="seeker-card hover-image hover-lift"
-              href="registered/index.html"
-            >
-              <img
-                src="images/top/seeker-card-02.png"
-                alt="登録スタッフの方—登録・お仕事用フォームはこちら。"
-              />
+            <a class="seeker-card" href="registered/index.html">
+              <span class="card-number">02</span>
+              <div class="seeker-card__illustration seeker-card__illustration--02" aria-hidden="true"></div>
+              <h3>登録スタッフの方</h3><p>登録・お仕事用フォームはこちら。</p>
+              <span class="card-link">詳しく見る <span aria-hidden="true">→</span></span>
             </a>
-            <a
-              data-reveal
-              class="seeker-card hover-image hover-lift"
-              href="introduction/faq/index.html"
-            >
-              <img
-                src="images/top/seeker-card-03.png"
-                alt="よくあるご質問—ご不明な点はこちらをご覧ください。"
-              />
+            <a class="seeker-card" href="introduction/faq/index.html">
+              <span class="card-number">03</span>
+              <div class="seeker-card__illustration seeker-card__illustration--03" aria-hidden="true"></div>
+              <h3>よくあるご質問</h3><p>ご不明な点はこちらをご覧ください。</p>
+              <span class="card-link">詳しく見る <span aria-hidden="true">→</span></span>
             </a>
           </div>
         </div>
@@ -267,7 +220,7 @@
                 <div class="swiper-slide">
                   <button
                     type="button"
-                    class="interview-card hover-image hover-lift"
+                    class="interview-card hover-image"
                     data-interview="1"
                     aria-haspopup="dialog"
                     aria-controls="interview-modal"
@@ -288,7 +241,7 @@
                 <div class="swiper-slide">
                   <button
                     type="button"
-                    class="interview-card hover-image hover-lift"
+                    class="interview-card hover-image"
                     data-interview="2"
                     aria-haspopup="dialog"
                     aria-controls="interview-modal"
@@ -307,7 +260,7 @@
                 <div class="swiper-slide">
                   <button
                     type="button"
-                    class="interview-card hover-image hover-lift"
+                    class="interview-card hover-image"
                     data-interview="3"
                     aria-haspopup="dialog"
                     aria-controls="interview-modal"
@@ -326,7 +279,7 @@
                 <div class="swiper-slide">
                   <button
                     type="button"
-                    class="interview-card hover-image hover-lift"
+                    class="interview-card hover-image"
                     data-interview="4"
                     aria-haspopup="dialog"
                     aria-controls="interview-modal"
@@ -345,7 +298,7 @@
                 <div class="swiper-slide">
                   <button
                     type="button"
-                    class="interview-card hover-image hover-lift"
+                    class="interview-card hover-image"
                     data-interview="5"
                     aria-haspopup="dialog"
                     aria-controls="interview-modal"

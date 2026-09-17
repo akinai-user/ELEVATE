@@ -76,7 +76,7 @@
       context.font = font;
       context.textAlign = 'left';
       context.textBaseline = 'middle';
-      context.fillStyle = '#080635';
+      context.fillStyle = '#292d33';
       // 本文と粒子生成に同じ字間を使い、変化の前後で文字位置を揃える。
       lines.forEach((line, index) => {
         const characters = Array.from(line);
@@ -116,7 +116,7 @@
       const b = target[i % target.length];
       const angle = Math.random() * Math.PI * 2;
       const distance = Math.min(width, height) * (0.2 + Math.random() * 0.55);
-      return { a, b, x: width / 2 + Math.cos(angle) * distance, y: height * 0.48 + Math.sin(angle) * distance * 0.7, size: 0.65 + Math.random() * 1.1, color: i % 13 === 0 ? '#9fbd20' : i % 3 === 0 ? '#5a20f0' : '#080635' };
+      return { a, b, x: width / 2 + Math.cos(angle) * distance, y: height * 0.48 + Math.sin(angle) * distance * 0.7, size: 0.65 + Math.random() * 1.1, color: i % 13 === 0 ? '#6ac3f1' : i % 3 === 0 ? '#217fae' : '#292d33' };
     });
     const ease = (t) => 1 - Math.pow(1 - Math.max(0, Math.min(1, t)), 3);
     let start;
