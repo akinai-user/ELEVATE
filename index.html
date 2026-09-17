@@ -1,475 +1,236 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ELEVATE | 人の力とテクノロジーで、働く未来を創造する。</title>
-    <meta
-      name="description"
-      content="人材事業とDX事業を通じて、人とテクノロジーの可能性をつなぐELEVATEの公式サイトです。"
-    />
-    <link rel="stylesheet" href="commn/css/common.css" />
-    <link rel="stylesheet" href="commn/css/site-shell.css" />
-    <link rel="stylesheet" href="commn/vendor/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/loading.css" />
-    <script src="js/loading.js" defer></script>
-    <script src="commn/js/common.js" defer></script>
-    <script src="commn/vendor/swiper/swiper-bundle.min.js" defer></script>
-    <script src="js/script.js" defer></script>
-  </head>
-
-  <body class="page-art">
-    <a class="skip-link" href="#main">本文へスキップ</a>
-    <div class="floating-background" aria-hidden="true">
-      <img class="floating-background__orb" src="images/common/floating-orb-01.png" alt="" width="1254" height="1254" decoding="async" />
-      <img class="floating-background__orb" src="images/common/floating-orb-02.png" alt="" width="1254" height="1254" decoding="async" />
-      <img class="floating-background__orb" src="images/common/floating-orb-03.png" alt="" width="1254" height="1254" decoding="async" />
-      <img class="floating-background__orb" src="images/common/floating-orb-04.png" alt="" width="1254" height="1254" decoding="async" />
-      <img class="floating-background__orb" src="images/common/floating-orb-05.png" alt="" width="1254" height="1254" decoding="async" />
-      <img class="floating-background__orb" src="images/common/floating-orb-06.png" alt="" width="1254" height="1254" decoding="async" />
-    </div>
-    <dialog class="loading-screen" id="loading-screen" aria-label="ELEVATE オープニング">
-      <canvas class="loading-screen__canvas" aria-hidden="true"></canvas>
-      <p class="loading-screen__message" aria-live="polite">人の力と技術力。働く未来を創造する。</p>
-      <div class="loading-screen__bottom">
-        <button class="loading-screen__skip" type="button" autofocus>SKIP <span aria-hidden="true">↗</span></button>
-      </div>
-      <div class="loading-screen__progress" aria-hidden="true"></div>
-    </dialog>
-    <header class="top-header">
-      <div class="top-header__inner">
-        <a
-          class="brand hover-image"
-          href="index.html"
-          aria-label="ELEVATE トップページ"
-        >
-          <img src="images/common/logo.png" alt="ELEVATE" />
-        </a>
-        <nav
-          class="global-nav"
-          id="global-nav"
-          aria-label="メインナビゲーション"
-        >
-          <a href="service/index.html" class="hover-underline" data-menu-number="01">サービス内容</a
-          ><a href="introduction/index.html" class="hover-underline" data-menu-number="02"
-            >お仕事紹介をご希望の方</a
-          ><a href="company/index.html" class="hover-underline" data-menu-number="03">会社情報</a
-          ><a href="registered/index.html" class="hover-underline" data-menu-number="04"
-            >登録スタッフの方</a
-          >
-          <div class="mobile-menu-actions">
-            <a class="mobile-menu-cta" href="web-registered/index.html">かんたんWeb登録 <span aria-hidden="true">↗</span></a>
-            <a class="mobile-menu-contact" href="contact/index.html">お問い合わせ <span aria-hidden="true">→</span></a>
-            <div class="mobile-menu-bottom"><a href="privacy/index.html">プライバシーポリシー</a></div>
-          </div>
-        </nav>
-        <div class="header-actions">
-          <a
-            class="header-button hover-fade"
-            href="contact/index.html"
-            >お問い合わせ <span>→</span></a
-          >
-          <a
-            class="header-button header-button--solid hover-fade"
-            href="web-registered/index.html"
-            >かんたんWeb登録 <span>→</span></a
-          >
-          <button
-            class="menu-button hover-fade"
-            type="button"
-            aria-controls="global-nav"
-            aria-expanded="false"
-            aria-label="メニューを開く"
-            data-menu-button
-          >
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <main id="main">
-      <section class="hero">
-        <div class="hero__inner">
-          <div data-reveal class="hero__copy">
-            <p class="eyebrow">PEOPLE × TECHNOLOGY</p>
-            <h1>人の力と技術力。<br />働く<span>未来を創造</span>する。</h1>
-            <p class="hero__lead">
-              テクノロジーと人の可能性をつなぎ、<br />すべての人がやりがいを持って働ける社会を実現する。
-            </p>
-          </div>
-          <div class="hero__visual" aria-hidden="true"></div>
-          <div data-reveal class="hero__buttons">
-            <a class="pill pill--solid" href="contact/index.html"
-              >企業のご担当者様へ <span>→</span></a
-            ><a class="pill" href="introduction/index.html"
-              >お仕事をお探しの方へ <span>→</span></a
-            >
-          </div>
-        </div>
-        <a
-          class="scroll-cue"
-          href="#service"
-          aria-label="サービス内容までスクロール"
-          ><b><img src="images/top/scroll-cue.png" alt="" /></b
-          ><span>SCROLL</span></a
-        >
-      </section>
-      <section class="section service" id="service">
-        <div class="section__inner">
-          <div data-reveal class="section-heading section-heading--split">
-            <div>
-              <p class="eyebrow">SERVICE</p>
-              <h2>サービス内容</h2>
-            </div>
-            <p class="section-heading__copy">
-              企業の成長と、はたらく人のキャリアを支援する<br />テクノロジー×人の力で実現します。
-            </p>
-            <a class="text-link hover-trigger" href="service/index.html"
-              ><span class="hover-underline">サービス一覧を見る</span>
-              <span aria-hidden="true">→</span></a
-            >
-          </div>
-          <div class="service-grid">
-            <article data-reveal class="service-card hover-lift">
-              <a href="service/staffing/index.html" class="hover-image">
-                <img
-                  src="images/top/service-card-01.png"
-                  alt="人材事業（アウトソーシング）—企業の業務課題に応じ、人材提供から常駐運営まで一括して支援します。"
-                />
-              </a>
-            </article>
-            <article data-reveal class="service-card hover-lift">
-              <a href="service/engineering/index.html" class="hover-image">
-                <img
-                  src="images/top/service-card-02.png"
-                  alt="DX事業—市場や顧客ニーズに基づき、新たなサービスやソリューションの企画・開発・事業化を支援します。"
-                />
-              </a>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="section news" id="news">
-        <div class="section__inner news__layout">
-          <div class="news__main">
-            <div data-reveal class="section-heading section-heading--line">
-              <div>
-                <p class="eyebrow">NEWS</p>
-                <h2>新着情報</h2>
-              </div>
-            </div>
-            <div data-reveal class="news-list" id="news-list">
-              <div class="news-item">
-                <time datetime="2025-12-25">2025.12.25</time
-                ><strong
-                  >年末年始休業のため、12/30〜1/4の期間はお問い合わせ対応を休止させていただきます。</strong
-                >
-              </div>
-              <div class="news-item">
-                <time datetime="2025-10-01">2025.10.01</time
-                ><strong
-                  >2025年10月1日より、社名を「株式会社ELEVATE」に変更いたしました。</strong
-                >
-              </div>
-              <div class="news-item">
-                <time datetime="2025-07-21">2025.07.21</time
-                ><strong>ホームページをリニューアルいたしました。</strong>
-              </div>
-            </div>
-          </div>
-          <aside data-reveal class="news-message">
-            <img
-              src="images/top/news-message.png"
-              alt="都市の風景とALWAYS NEW POSSIBILITIESのメッセージ"
-            />
-          </aside>
-        </div>
-      </section>
-      <section class="section seekers">
-        <div class="section__inner">
-          <div
-            data-reveal
-            class="section-heading section-heading--split section-heading--compact"
-          >
-            <div>
-              <p class="eyebrow">FOR JOB SEEKERS</p>
-              <h2>お仕事紹介をご希望の方へ</h2>
-            </div>
-            <p class="section-heading__copy">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ELEVATE | 人の力とテクノロジーで、働く未来を創造する。</title>
+<meta content="人材事業とDX事業を通じて、人とテクノロジーの可能性をつなぐELEVATEの公式サイトです。" name="description"/>
+<link href="commn/css/common.css" rel="stylesheet"/>
+<link href="commn/css/site-shell.css" rel="stylesheet"/>
+<link href="commn/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<script defer="" src="commn/js/common.js"></script>
+<script defer="" src="commn/vendor/swiper/swiper-bundle.min.js"></script>
+<script defer="" src="js/script.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><script defer="" src="js/top-design.js"></script><script>document.documentElement.classList.add("top-motion");</script><link href="css/top-reference.css" rel="stylesheet"/><script defer="" src="js/top-effects.js"></script></head>
+<body class="home-page">
+<a class="skip-link" href="#main">本文へスキップ</a>
+<header class="top-header">
+<div class="top-header__inner">
+<a aria-label="ELEVATE トップページ" class="brand hover-image" href="index.html">
+<img alt="ELEVATE" src="images/common/logo.png"/>
+</a>
+<nav aria-label="メインナビゲーション" class="global-nav" id="global-nav">
+<a class="hover-underline" data-menu-number="01" href="service/index.html">サービス内容</a><a class="hover-underline" data-menu-number="02" href="introduction/index.html">お仕事紹介をご希望の方</a><a class="hover-underline" data-menu-number="03" href="company/index.html">会社情報</a><a class="hover-underline" data-menu-number="04" href="registered/index.html">登録スタッフの方</a>
+<div class="mobile-menu-actions">
+<a class="mobile-menu-cta" href="web-registered/index.html">かんたんWeb登録 <span aria-hidden="true">↗</span></a>
+<a class="mobile-menu-contact" href="contact/index.html">お問い合わせ <span aria-hidden="true">→</span></a>
+<div class="mobile-menu-bottom"><a href="privacy/index.html">プライバシーポリシー</a></div>
+</div>
+</nav>
+<div class="header-actions">
+<a class="header-button hover-fade" href="contact/index.html">お問い合わせ <span>→</span></a>
+<a class="header-button header-button--solid hover-fade" href="web-registered/index.html">かんたんWeb登録 <span>→</span></a>
+<button aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開く" class="menu-button hover-fade" data-menu-button="" type="button">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
+</header>
+<main id="main">
+<section class="hero" data-section-label="TOP" id="hero"><div aria-hidden="true" class="hero__lines"><i></i><i></i><i></i></div><div aria-hidden="true" class="hero__code">&lt;/ELEVATE&gt;　&lt;ELEVATE&gt;</div>
+<div class="hero__inner">
+<div class="hero__copy">
+<h1><span class="hero-type hero-type--normal">人の力と技術力。</span><span class="hero-type hero-type--normal">働く</span><span class="hero-type hero-type--strong">未来を創造</span><span class="hero-type hero-type--tail">する。</span></h1><p class="eyebrow">PEOPLE × TECHNOLOGY</p>
+</div>
+<div aria-hidden="true" class="hero__visual"><img alt="" class="hero__mark" fetchpriority="high" height="640" src="images/top/cosawell-inspired/elevate-mark.svg" width="720"/></div>
+</div>
+<a aria-label="次のセクションまでスクロール" class="scroll-cue" href="#message"><b></b><span>SCROLL</span></a>
+</section><section class="message" data-section-label="PEOPLE × TECHNOLOGY" id="message"><div class="section__inner message__inner"><div class="message__copy" data-reference-reveal=""><h2 class="message__title">人の力と技術力。働く未来を創造する。</h2><p class="hero__lead">
+              テクノロジーと人の可能性をつなぎ、<br/>すべての人がやりがいを持って働ける社会を実現する。
+            </p><div class="hero__buttons" data-reference-reveal="">
+<a class="pill pill--solid" href="contact/index.html">企業のご担当者様へ <span>→</span></a><a class="pill" href="introduction/index.html">お仕事をお探しの方へ <span>→</span></a>
+</div></div><figure class="message__visual" data-reference-reveal=""><img alt="明るいオフィスで話し合うチームのイメージ" height="1402" loading="lazy" src="images/top/generated/team.jpg" width="1122"/><figcaption>ALWAYS NEW POSSIBILITIES</figcaption></figure></div></section>
+<section class="section service" data-section-label="SERVICE" id="service">
+<div class="section__inner service__stage"><div class="service__intro"><div class="section-heading section-heading--split" data-reference-reveal="">
+<div>
+<p class="eyebrow">SERVICE</p>
+<h2>サービス内容</h2>
+</div>
+</div><p class="section-heading__copy">
+              企業の成長と、はたらく人のキャリアを支援する<br/>テクノロジー×人の力で実現します。
+            </p><a class="text-link hover-trigger" href="service/index.html"><span class="hover-underline">サービス一覧を見る</span>
+<span aria-hidden="true">→</span></a></div>
+<div class="service__orbit-track"><div class="service__orbit"><svg aria-hidden="true" class="service__ring" viewBox="0 0 640 640"><circle cx="350" cy="350" r="265"></circle><circle class="service__progress" cx="350" cy="350" pathLength="1" r="265"></circle></svg><div class="service-grid"><article class="service-card" id="service-01"><span class="card-number">[ 01/02 ]</span><p class="service-card__en">OUTSOURCING</p><h3>人材事業<small>（アウトソーシング）</small></h3><p class="service-card__copy">企業の業務課題に応じた人材の提供から常駐運営までを一括して支援するアウトソーシングサービスです。</p><a class="text-link" href="service/staffing/index.html">詳しく見る<span aria-hidden="true">→</span></a></article><article class="service-card" id="service-02"><span class="card-number">[ 02/02 ]</span><p class="service-card__en">DIGITAL TRANSFORMATION</p><h3>DX事業<small></small></h3><p class="service-card__copy">市場や顧客ニーズに基づき、新たなサービスやソリューションを企画・開発・事業化までを支援します。</p><a class="text-link" href="service/engineering/index.html">詳しく見る<span aria-hidden="true">→</span></a></article></div><div aria-label="事業の切り替え" class="service__satellites"><button aria-label="人材事業を表示" aria-pressed="true" class="service__tab is-active" data-service="0" type="button"><span class="service__tab-inner"><svg aria-hidden="true" viewBox="0 0 64 64"><circle cx="32" cy="20" r="10"></circle><path d="M12 55v-6a20 20 0 0 1 40 0v6M9 24a8 8 0 0 0 0 16M55 24a8 8 0 0 1 0 16"></path></svg><span>01</span><span class="service__tab-title">人材事業</span></span></button><button aria-label="DX事業を表示" aria-pressed="false" class="service__tab" data-service="1" type="button"><span class="service__tab-inner"><svg aria-hidden="true" viewBox="0 0 64 64"><rect height="34" rx="3" width="48" x="8" y="10"></rect><path d="M22 56h20M32 44v12M24 21l-7 6 7 6M40 21l7 6-7 6"></path></svg><span>02</span><span class="service__tab-title">DX事業</span></span></button></div></div></div>
+<div aria-hidden="true" class="service__watermark">PEOPLE ×<br/>TECHNOLOGY</div><p aria-hidden="true" class="service__large-number">01</p></div>
+</section>
+<section class="section seekers" data-section-label="FOR JOB SEEKERS" id="seekers">
+<div class="section__inner">
+<div class="section-heading section-heading--split section-heading--compact" data-reference-reveal="">
+<div>
+<p class="eyebrow">FOR JOB SEEKERS</p>
+<h2>お仕事紹介をご希望の方へ</h2>
+</div>
+<p class="section-heading__copy">
               あなたのキャリアに、新しい可能性を。
             </p>
-          </div>
-          <div class="seekers-grid">
-            <a
-              data-reveal
-              class="seeker-card hover-image hover-lift"
-              href="introduction/index.html"
-            >
-              <img
-                src="images/top/seeker-card-01.png"
-                alt="お仕事紹介をご希望の方—あなたに合ったお仕事をご紹介します。"
-              />
-            </a>
-            <a
-              data-reveal
-              class="seeker-card hover-image hover-lift"
-              href="registered/index.html"
-            >
-              <img
-                src="images/top/seeker-card-02.png"
-                alt="登録スタッフの方—登録・お仕事用フォームはこちら。"
-              />
-            </a>
-            <a
-              data-reveal
-              class="seeker-card hover-image hover-lift"
-              href="introduction/faq/index.html"
-            >
-              <img
-                src="images/top/seeker-card-03.png"
-                alt="よくあるご質問—ご不明な点はこちらをご覧ください。"
-              />
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="section interview">
-        <div class="section__inner">
-          <div
-            data-reveal
-            class="section-heading section-heading--split section-heading--compact"
-          >
-            <div>
-              <p class="eyebrow">INTERVIEW</p>
-              <h2>社員インタビュー</h2>
-            </div>
-            <p class="section-heading__copy">
+</div>
+<div class="seekers-grid">
+<a class="seeker-card" data-reference-reveal="" href="introduction/index.html"><div aria-hidden="true" class="seeker-card__visual seeker-card__visual--1"><img alt="" height="1254" loading="lazy" src="images/top/generated/career.jpg" width="1254"/></div><div class="seeker-card__body"><span class="seeker-card__number">01</span><h3><span>お仕事紹介をご希望の方</span></h3><p>あなたに合ったお仕事をご紹介します。</p><span class="seeker-card__link">詳しく見る <span aria-hidden="true">→</span></span></div></a>
+<a class="seeker-card" data-reference-reveal="" href="registered/index.html"><div aria-hidden="true" class="seeker-card__visual seeker-card__visual--2"><img alt="" height="1254" loading="lazy" src="images/top/generated/engineering.jpg" width="1254"/></div><div class="seeker-card__body"><span class="seeker-card__number">02</span><h3><span>登録スタッフの方</span></h3><p>登録・お仕事用フォームはこちら。</p><span class="seeker-card__link">詳しく見る <span aria-hidden="true">→</span></span></div></a>
+<a class="seeker-card" data-reference-reveal="" href="introduction/faq/index.html"><div aria-hidden="true" class="seeker-card__visual seeker-card__visual--3"><img alt="" height="1402" loading="lazy" src="images/top/generated/team.jpg" width="1122"/></div><div class="seeker-card__body"><span class="seeker-card__number">03</span><h3><span>よくあるご質問</span></h3><p>ご不明な点はこちらをご覧ください。</p><span class="seeker-card__link">詳しく見る <span aria-hidden="true">→</span></span></div></a>
+</div>
+</div>
+</section><section class="section news" data-section-label="NEWS" id="news">
+<div class="section__inner news__layout">
+<div class="news__main">
+<div class="section-heading section-heading--line" data-reference-reveal="">
+<div>
+<p class="eyebrow">NEWS</p>
+<h2>新着情報</h2>
+</div>
+</div>
+<div class="news-list" data-reference-reveal="" id="news-list">
+<div class="news-item">
+<time datetime="2025-12-25">2025.12.25</time><strong>年末年始休業のため、12/30〜1/4の期間はお問い合わせ対応を休止させていただきます。</strong>
+</div>
+<div class="news-item">
+<time datetime="2025-10-01">2025.10.01</time><strong>2025年10月1日より、社名を「株式会社ELEVATE」に変更いたしました。</strong>
+</div>
+<div class="news-item">
+<time datetime="2025-07-21">2025.07.21</time><strong>ホームページをリニューアルいたしました。</strong>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section interview" data-section-label="INTERVIEW" id="interview">
+<div class="section__inner">
+<div class="section-heading section-heading--split section-heading--compact" data-reference-reveal="">
+<div>
+<p class="eyebrow">INTERVIEW</p>
+<h2>社員インタビュー</h2>
+</div>
+<p class="section-heading__copy">
               ELEVATEで働く仲間たちのリアルな声をご紹介します。
             </p>
-          </div>
-          <div class="carousel-wrap">
-            <button
-              class="carousel-arrow carousel-arrow--prev"
-              type="button"
-              aria-label="前のインタビュー"
-              data-carousel-prev
-            >
+</div>
+<div class="carousel-wrap">
+<button aria-label="前のインタビュー" class="carousel-arrow carousel-arrow--prev" data-carousel-prev="" type="button">
               ←
             </button>
-            <div
-              class="swiper interview-slider"
-              id="interview-list"
-              aria-label="社員インタビュー"
-            >
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <button
-                    type="button"
-                    class="interview-card hover-image hover-lift"
-                    data-interview="1"
-                    aria-haspopup="dialog"
-                    aria-controls="interview-modal"
-                  >
-                    <div>
-                      <span class="card-number">01</span
-                      ><img
-                        src="images/top/interview-01.png"
-                        alt="営業職の男性社員"
-                      />
-                    </div>
-                    <h3>
-                      自分に合う仕事と出会い、<br />新しい一歩を踏み出す。
+<div aria-label="社員インタビュー" class="swiper interview-slider" id="interview-list">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<button aria-controls="interview-modal" aria-haspopup="dialog" class="interview-card hover-image hover-lift" data-interview="1" type="button">
+<div>
+<span class="card-number">01</span><img alt="営業職の男性社員" decoding="async" loading="lazy" src="images/top/interview-01.png"/>
+</div>
+<h3>
+                      自分に合う仕事と出会い、<br/>新しい一歩を踏み出す。
                     </h3>
-                    <p><span>人材紹介</span><span>営業</span></p>
-                  </button>
-                </div>
-                <div class="swiper-slide">
-                  <button
-                    type="button"
-                    class="interview-card hover-image hover-lift"
-                    data-interview="2"
-                    aria-haspopup="dialog"
-                    aria-controls="interview-modal"
-                  >
-                    <div>
-                      <span class="card-number">02</span
-                      ><img
-                        src="images/top/interview-02.png"
-                        alt="事務職の女性社員"
-                      />
-                    </div>
-                    <h3>経験を活かして、<br />次のキャリアへ。</h3>
-                    <p><span>人材紹介</span><span>事務</span></p>
-                  </button>
-                </div>
-                <div class="swiper-slide">
-                  <button
-                    type="button"
-                    class="interview-card hover-image hover-lift"
-                    data-interview="3"
-                    aria-haspopup="dialog"
-                    aria-controls="interview-modal"
-                  >
-                    <div>
-                      <span class="card-number">03</span
-                      ><img
-                        src="images/top/interview-03.png"
-                        alt="エンジニア職の男性社員"
-                      />
-                    </div>
-                    <h3>スキルを強みに、<br />自分らしい働き方を。</h3>
-                    <p><span>DX事業</span><span>エンジニア</span></p>
-                  </button>
-                </div>
-                <div class="swiper-slide">
-                  <button
-                    type="button"
-                    class="interview-card hover-image hover-lift"
-                    data-interview="4"
-                    aria-haspopup="dialog"
-                    aria-controls="interview-modal"
-                  >
-                    <div>
-                      <span class="card-number">04</span
-                      ><img
-                        src="images/top/interview-01.png"
-                        alt="営業職の男性社員"
-                      />
-                    </div>
-                    <h3>人と企業をつなぎ、<br />ともに成長していく。</h3>
-                    <p><span>人材紹介</span><span>コーディネーター</span></p>
-                  </button>
-                </div>
-                <div class="swiper-slide">
-                  <button
-                    type="button"
-                    class="interview-card hover-image hover-lift"
-                    data-interview="5"
-                    aria-haspopup="dialog"
-                    aria-controls="interview-modal"
-                  >
-                    <div>
-                      <span class="card-number">05</span
-                      ><img
-                        src="images/top/interview-02.png"
-                        alt="事務職の女性社員"
-                      />
-                    </div>
-                    <h3>小さな挑戦の積み重ねが、<br />未来の自信になる。</h3>
-                    <p><span>人材紹介</span><span>営業サポート</span></p>
-                  </button>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-            <button
-              class="carousel-arrow carousel-arrow--next"
-              type="button"
-              aria-label="次のインタビュー"
-              data-carousel-next
-            >
+<p><span>人材紹介</span><span>営業</span></p>
+</button>
+</div>
+<div class="swiper-slide">
+<button aria-controls="interview-modal" aria-haspopup="dialog" class="interview-card hover-image hover-lift" data-interview="2" type="button">
+<div>
+<span class="card-number">02</span><img alt="事務職の女性社員" decoding="async" loading="lazy" src="images/top/interview-02.png"/>
+</div>
+<h3>経験を活かして、<br/>次のキャリアへ。</h3>
+<p><span>人材紹介</span><span>事務</span></p>
+</button>
+</div>
+<div class="swiper-slide">
+<button aria-controls="interview-modal" aria-haspopup="dialog" class="interview-card hover-image hover-lift" data-interview="3" type="button">
+<div>
+<span class="card-number">03</span><img alt="エンジニア職の男性社員" decoding="async" loading="lazy" src="images/top/interview-03.png"/>
+</div>
+<h3>スキルを強みに、<br/>自分らしい働き方を。</h3>
+<p><span>DX事業</span><span>エンジニア</span></p>
+</button>
+</div>
+<div class="swiper-slide">
+<button aria-controls="interview-modal" aria-haspopup="dialog" class="interview-card hover-image hover-lift" data-interview="4" type="button">
+<div>
+<span class="card-number">04</span><img alt="営業職の男性社員" decoding="async" loading="lazy" src="images/top/interview-01.png"/>
+</div>
+<h3>人と企業をつなぎ、<br/>ともに成長していく。</h3>
+<p><span>人材紹介</span><span>コーディネーター</span></p>
+</button>
+</div>
+<div class="swiper-slide">
+<button aria-controls="interview-modal" aria-haspopup="dialog" class="interview-card hover-image hover-lift" data-interview="5" type="button">
+<div>
+<span class="card-number">05</span><img alt="事務職の女性社員" decoding="async" loading="lazy" src="images/top/interview-02.png"/>
+</div>
+<h3>小さな挑戦の積み重ねが、<br/>未来の自信になる。</h3>
+<p><span>人材紹介</span><span>営業サポート</span></p>
+</button>
+</div>
+</div>
+<div class="swiper-pagination"></div>
+</div>
+<button aria-label="次のインタビュー" class="carousel-arrow carousel-arrow--next" data-carousel-next="" type="button">
               →
             </button>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <dialog
-      class="interview-modal"
-      id="interview-modal"
-      aria-labelledby="interview-modal-title"
-    >
-      <button
-        class="interview-modal__close hover-fade"
-        type="button"
-        aria-label="インタビューを閉じる"
-        autofocus
-      ></button>
-      <img class="interview-modal__image" alt="" />
-      <div class="interview-modal__body">
-        <p class="eyebrow">INTERVIEW <span data-modal-number></span></p>
-        <h2 id="interview-modal-title"></h2>
-        <p class="interview-modal__role"></p>
-        <p class="interview-modal__notice">
+<button aria-label="インタビューの自動切り替えを停止" aria-pressed="false" class="interview-autoplay" type="button">Ⅱ</button></div>
+</div>
+</section>
+</main>
+<dialog aria-labelledby="interview-modal-title" class="interview-modal" id="interview-modal">
+<button aria-label="インタビューを閉じる" autofocus="" class="interview-modal__close hover-fade" type="button"></button>
+<img alt="" class="interview-modal__image"/>
+<div class="interview-modal__body">
+<p class="eyebrow">INTERVIEW <span data-modal-number=""></span></p>
+<h2 id="interview-modal-title"></h2>
+<p class="interview-modal__role"></p>
+<p class="interview-modal__notice">
           ※掲載準備中のサンプルインタビューです。内容は仮のものです。
         </p>
-        <div class="interview-modal__content"></div>
-      </div>
-    </dialog>
-
-    <footer class="top-footer">
-      <div class="top-footer__inner">
-        <div class="footer-brand">
-          <a class="brand brand--light hover-image" href="index.html">
-            <img src="images/common/logo.png" alt="ELEVATE" />
-          </a>
-          <p>〒595-0072 大阪府泉大津市松之浜町1丁目1-10-3F<br />TEL:0120-334-335 / 0725-20-0140</p>
-        </div>
-        <div class="footer-column">
-          <h2>サービス内容</h2>
-          <a href="service/staffing/index.html" class="hover-underline"
-            >・総合人材派遣サービス</a
-          ><a href="service/engineering/index.html" class="hover-underline"
-            >・システムエンジニアリングサービス</a
-          >
-        </div>
-        <div class="footer-column">
-          <h2>お仕事紹介をご希望の方</h2>
-          <a href="introduction/staffing/index.html" class="hover-underline"
-            >・総合人材派遣サービス</a
-          ><a
-            href="https://elevate-works.jp/lp/"
-            class="hover-underline footer-external-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="ELEVATE（別タブで開く）"
-            >・ELEVATE
-            <svg class="footer-external-icon" viewBox="0 0 16 16" aria-hidden="true">
-              <path d="M6 3H3v10h10v-3M8 3h5v5M13 3 7 9" />
-            </svg></a
-          ><a href="introduction/faq/index.html" class="hover-underline"
-            >・よくあるご質問</a
-          >
-        </div>
-        <div class="footer-column">
-          <h2>登録スタッフの方</h2>
-          <a href="advance-payment/index.html" class="hover-underline">・前払い申請フォーム</a
-          ><a href="transportation-expenses/index.html" class="hover-underline">・交通費申請フォーム</a
-          >
-        </div>
-        <div class="footer-column">
-          <h2>お問い合わせ</h2>
-          <a href="web-registered/index.html" class="hover-underline"
-            >・かんたんWeb登録</a
-          >
-        </div>
-        <div class="footer-bottom">
-          <small
-            >© <span data-current-year>2026</span> ELEVATE. All Rights
-            Reserved.</small
-          >
-          <div>
-            <a href="company/index.html" class="hover-underline"
-              >会社概要</a
-            ><span>|</span>
-            <a href="privacy/index.html" class="hover-underline"
-              >プライバシーポリシー</a
-            >
-          </div>
-        </div>
-      </div>
-    </footer>
-    <button
-      class="back-to-top hover-fade"
-      type="button"
-      aria-label="ページ上部へ戻る"
-      data-back-to-top
-      hidden
-    >
+<div class="interview-modal__content"></div>
+</div>
+</dialog>
+<footer class="top-footer"><div class="footer-contact section__inner"><a href="contact/index.html"><span>お問い合わせ</span><span aria-hidden="true">↗</span></a><a href="web-registered/index.html">かんたんWeb登録 <span aria-hidden="true">↗</span></a></div>
+<div class="top-footer__inner">
+<div class="footer-brand">
+<a class="brand brand--light hover-image" href="index.html">
+<img alt="ELEVATE" src="images/common/logo.png"/>
+</a>
+<p>〒595-0072 大阪府泉大津市松之浜町1丁目1-10-3F<br/>TEL:0120-334-335 / 0725-20-0140</p>
+</div>
+<div class="footer-column">
+<h2>サービス内容</h2>
+<a class="hover-underline" href="service/staffing/index.html">・総合人材派遣サービス</a><a class="hover-underline" href="service/engineering/index.html">・システムエンジニアリングサービス</a>
+</div>
+<div class="footer-column">
+<h2>お仕事紹介をご希望の方</h2>
+<a class="hover-underline" href="introduction/staffing/index.html">・総合人材派遣サービス</a><a aria-label="ELEVATE（別タブで開く）" class="hover-underline footer-external-link" href="https://elevate-works.jp/lp/" rel="noopener noreferrer" target="_blank">・ELEVATE
+            <svg aria-hidden="true" class="footer-external-icon" viewBox="0 0 16 16">
+<path d="M6 3H3v10h10v-3M8 3h5v5M13 3 7 9"></path>
+</svg></a><a class="hover-underline" href="introduction/faq/index.html">・よくあるご質問</a>
+</div>
+<div class="footer-column">
+<h2>登録スタッフの方</h2>
+<a class="hover-underline" href="advance-payment/index.html">・前払い申請フォーム</a><a class="hover-underline" href="transportation-expenses/index.html">・交通費申請フォーム</a>
+</div>
+<div class="footer-column">
+<h2>お問い合わせ</h2>
+<a class="hover-underline" href="web-registered/index.html">・かんたんWeb登録</a>
+</div>
+<div class="footer-bottom">
+<small>© <span data-current-year="">2026</span> ELEVATE. All Rights
+            Reserved.</small>
+<div>
+<a class="hover-underline" href="company/index.html">会社概要</a><span>|</span>
+<a class="hover-underline" href="privacy/index.html">プライバシーポリシー</a>
+</div>
+</div>
+</div>
+</footer>
+<button aria-label="ページ上部へ戻る" class="back-to-top hover-fade" data-back-to-top="" hidden="" type="button">
       ↑
     </button>
-  </body>
+<div aria-hidden="true" class="section-label">[ TOP ]</div></body>
 </html>

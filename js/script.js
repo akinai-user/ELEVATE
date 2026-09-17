@@ -8,9 +8,13 @@
     if (!carousel || !window.Swiper) return;
 
     const slider = new window.Swiper(carousel, {
-      slidesPerView: 1.08,
-      spaceBetween: 14,
-      speed: reducedMotion.matches ? 0 : 500,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      effect: 'cards',
+      cardsEffect: { slideShadows: false, perSlideOffset: 10, perSlideRotate: -13, rotate: true },
+      grabCursor: true,
+      speed: reducedMotion.matches ? 0 : 600,
+      autoplay: { enabled: !reducedMotion.matches, delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true },
       watchOverflow: true,
       navigation: {
         prevEl: "[data-carousel-prev]",
@@ -27,14 +31,37 @@
         paginationBulletMessage: "{{index}}枚目のインタビューを表示",
         slideLabelMessage: "{{index}} / {{slidesLength}}",
       },
-      breakpoints: {
-        768: { slidesPerView: 2, spaceBetween: 17 },
-        1024: { slidesPerView: 3, spaceBetween: 17 },
-      },
+
     });
 
-    reducedMotion.addEventListener("change", () => {
-      slider.params.speed = reducedMotion.matches ? 0 : 500;
+    const pauseButton = document.querySelector('.interview-autoplay');
+    let userPaused = false;
+    let visible = false;
+    const syncAutoplay = () => {
+      const pause = userPaused || reducedMotion.matches || !visible || document.hidden ||
+        carousel.contains(document.activeElement) || document.querySelector('#interview-modal')?.open;
+      if (pause) slider.autoplay.stop();
+      else slider.autoplay.start();
+    };
+    slider.autoplay.stop();
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; syncAutoplay(); }, {threshold: .15}).observe(carousel);
+    }
+    pauseButton?.addEventListener('click', () => {
+      userPaused = !userPaused;
+      pauseButton.textContent = userPaused ? '▷' : 'Ⅱ';
+      pauseButton.setAttribute('aria-pressed', String(userPaused));
+      pauseButton.setAttribute('aria-label', userPaused ? 'インタビューの自動切り替えを再開' : 'インタビューの自動切り替えを停止');
+      syncAutoplay();
+    });
+    document.addEventListener('visibilitychange', syncAutoplay);
+    document.querySelector('#interview-modal')?.addEventListener('close', syncAutoplay);
+    carousel.addEventListener('focusin', syncAutoplay);
+    carousel.addEventListener('click', () => requestAnimationFrame(syncAutoplay));
+    carousel.addEventListener('focusout', () => requestAnimationFrame(syncAutoplay));
+    reducedMotion.addEventListener('change', () => {
+      slider.params.speed = reducedMotion.matches ? 0 : 600;
+      syncAutoplay();
     });
     carousel.addEventListener("focusin", (event) => {
       const slide = event.target.closest(".swiper-slide");
@@ -119,11 +146,9 @@
     const hero = document.querySelector(".hero");
     if (!button || !hero) return;
 
-    const header = document.querySelector(".top-header");
     let framePending = false;
     const sync = () => {
-      const headerHeight = header?.getBoundingClientRect().height || 0;
-      button.hidden = hero.getBoundingClientRect().bottom > headerHeight;
+      button.hidden = hero.getBoundingClientRect().bottom > 0;
       framePending = false;
     };
     const scheduleSync = () => {
