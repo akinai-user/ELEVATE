@@ -241,17 +241,5 @@
     "description": "人材サービス・IT・DXサービスのご相談、見積もりのご依頼はこちら。",
     "parents": [],
     "class": "subpage"
-  },
-  {
-    "file": "lp/index.html",
-    "title": "フリーランスエンジニアの案件紹介",
-    "description": "フリーランスエンジニア向けの案件紹介、キャリア支援、面談のお申し込み。",
-    "parents": [
-      [
-        "お仕事をお探しの方",
-        "/introduction/"
-      ]
-    ],
-    "class": "subpage subpage--lp"
   }
 ]

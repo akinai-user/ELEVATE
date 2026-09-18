@@ -127,7 +127,9 @@
 .subpage :where(.mt50,.mt80,.mt100,.steplist-contact) { margin-top: 48px; }
 .subpage .steplist-contact { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; padding: 32px; background: var(--soft); }
 .subpage .engineering-bnr { width: var(--page-width); margin: 64px auto 0; text-align: center; }
+.subpage .engineering-bnr__link { position: relative; display: inline-block; }
 .subpage .engineering-bnr img { max-height: 280px; object-fit: contain; }
+.subpage .engineering-bnr .external-window-icon { position: absolute; right: 12px; bottom: 12px; display: grid; width: 40px; height: 40px; place-items: center; background: var(--brand); color: #fff; font-size: 20px; line-height: 1; }
 .subpage .form__birth { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
 .subpage .form__birth input { width: 110px; }
 .subpage .form__file-btn { margin-top: 12px; padding: 12px 18px; border: 1px solid var(--line); background: var(--soft); cursor: pointer; }
