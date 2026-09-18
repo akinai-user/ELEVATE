@@ -1,0 +1,8 @@
+{
+  "service/staffing/index.html": "service/hr/index.html",
+  "service/staffing/staffing-agency/index.html": "service/hr/staffing/index.html",
+  "service/staffing/recruitment-agency/index.html": "service/hr/recruitment/index.html",
+  "service/staffing/contract-work/index.html": "service/hr/outsourcing/index.html",
+  "service/engineering/index.html": "service/it-dx/engineering/index.html",
+  "service/engineering/ai-link-merged.html": "service/it-dx/ai/index.html"
+}

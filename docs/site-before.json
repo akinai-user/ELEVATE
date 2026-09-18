@@ -1,0 +1,97 @@
+[
+  {
+    "url": "/",
+    "file": "index.html",
+    "title": "ELEVATE | 人の力とテクノロジーで、働く未来を創造する。"
+  },
+  {
+    "url": "/contact/",
+    "file": "contact/index.html",
+    "title": "企業向けお問い合わせ | ELEVATE"
+  },
+  {
+    "url": "/privacy/",
+    "file": "privacy/index.html",
+    "title": "プライバシーポリシー | ELEVATE"
+  },
+  {
+    "url": "/advance-payment/",
+    "file": "advance-payment/index.html",
+    "title": "前払い申請フォーム | ELEVATE"
+  },
+  {
+    "url": "/introduction/",
+    "file": "introduction/index.html",
+    "title": "お仕事紹介をご希望の方 | ELEVATE"
+  },
+  {
+    "url": "/introduction/faq/",
+    "file": "introduction/faq/index.html",
+    "title": "よくあるご質問 | ELEVATE"
+  },
+  {
+    "url": "/introduction/staffing/",
+    "file": "introduction/staffing/index.html",
+    "title": "総合人材派遣サービス | ELEVATE"
+  },
+  {
+    "url": "/lp/",
+    "file": "lp/index.html",
+    "title": "フリーランスエンジニア ELEVATE | ELEVATE"
+  },
+  {
+    "url": "/transportation-expenses/",
+    "file": "transportation-expenses/index.html",
+    "title": "交通費申請フォーム | ELEVATE"
+  },
+  {
+    "url": "/web-registered/",
+    "file": "web-registered/index.html",
+    "title": "かんたんWeb登録 | ELEVATE"
+  },
+  {
+    "url": "/registered/",
+    "file": "registered/index.html",
+    "title": "登録スタッフの方 | ELEVATE"
+  },
+  {
+    "url": "/service/",
+    "file": "service/index.html",
+    "title": "サービス内容 | ELEVATE"
+  },
+  {
+    "url": "/service/staffing/",
+    "file": "service/staffing/index.html",
+    "title": "総合人材派遣サービス | ELEVATE"
+  },
+  {
+    "url": "/service/staffing/recruitment-agency/",
+    "file": "service/staffing/recruitment-agency/index.html",
+    "title": "人材紹介 | ELEVATE"
+  },
+  {
+    "url": "/service/staffing/staffing-agency/",
+    "file": "service/staffing/staffing-agency/index.html",
+    "title": "人材派遣 | ELEVATE"
+  },
+  {
+    "url": "/service/staffing/contract-work/",
+    "file": "service/staffing/contract-work/index.html",
+    "title": "業務請負 | ELEVATE"
+  },
+  {
+    "url": "/service/engineering/",
+    "file": "service/engineering/index.html",
+    "title": "システムエンジニアリングサービス | ELEVATE"
+  },
+  {
+    "url": "/service/engineering/ai-link-merged.html",
+    "file": "service/engineering/ai-link-merged.html",
+    "title": "AI導入サービス AI-LINK | ELEVATE"
+  },
+  {
+    "url": "/company/",
+    "file": "company/index.html",
+    "title": "会社概要 | ELEVATE"
+  }
+]

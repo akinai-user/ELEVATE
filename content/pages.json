@@ -1,0 +1,257 @@
+[
+  {
+    "file": "index.html",
+    "title": "人材サービスとIT・DXで企業を支援",
+    "description": "人材派遣・人材紹介・業務請負、システムエンジニアリング・AI導入・システム開発。ELEVATEは人材とIT・DXの2事業で企業の成長を支援します。",
+    "parents": [],
+    "class": ""
+  },
+  {
+    "file": "service/index.html",
+    "title": "サービス",
+    "description": "人材とIT・DXの2事業・6サービスを、企業の課題から選べます。",
+    "parents": [],
+    "class": ""
+  },
+  {
+    "file": "service/hr/index.html",
+    "title": "人材サービス",
+    "description": "必要な期間の人員確保から直接雇用、業務全体の運営まで。人と組織の課題に合わせて、3つの方法から選べます。",
+    "parents": [
+      [
+        "サービス",
+        "/service/"
+      ]
+    ],
+    "class": ""
+  },
+  {
+    "file": "service/it-dx/index.html",
+    "title": "IT・DXサービス",
+    "description": "技術者の参画による開発体制の強化、現場で使えるAIの導入、業務に合ったシステム開発。課題に応じた技術支援を提供します。",
+    "parents": [
+      [
+        "サービス",
+        "/service/"
+      ]
+    ],
+    "class": ""
+  },
+  {
+    "file": "service/hr/staffing/index.html",
+    "title": "人材派遣",
+    "description": "業務量や期間に合わせてスタッフを配置。就業前の教育と就業後のフォローで現場を支えます。",
+    "parents": [
+      [
+        "サービス",
+        "/service/"
+      ],
+      [
+        "人材サービス",
+        "/service/hr/"
+      ]
+    ],
+    "class": ""
+  },
+  {
+    "file": "service/hr/recruitment/index.html",
+    "title": "人材紹介",
+    "description": "採用要件に合う候補者をご紹介。選考・条件調整から入社後のフォローまで支援します。",
+    "parents": [
+      [
+        "サービス",
+        "/service/"
+      ],
+      [
+        "人材サービス",
+        "/service/hr/"
+      ]
+    ],
+    "class": ""
+  },
+  {
+    "file": "service/hr/outsourcing/index.html",
+    "title": "業務請負",
+    "description": "業務の一部または全体を受託。作業体制の構築から進捗・品質管理まで担います。",
+    "parents": [
+      [
+        "サービス",
+        "/service/"
+      ],
+      [
+        "人材サービス",
+        "/service/hr/"
+      ]
+    ],
+    "class": ""
+  },
+  {
+    "file": "service/it-dx/engineering/index.html",
+    "title": "システムエンジニアリング",
+    "description": "必要なスキルを持つエンジニアが参画し、開発・運用・保守などの技術業務を支援します。",
+    "parents": [
+      [
+        "サービス",
+        "/service/"
+      ],
+      [
+        "IT・DXサービス",
+        "/service/it-dx/"
+      ]
+    ],
+    "class": ""
+  },
+  {
+    "file": "service/it-dx/ai/index.html",
+    "title": "AI導入サービス AI-LINK",
+    "description": "AI-LINKは現場常駐の実行人材と戦略人材が、AI活用の設計・実装・定着を支援します。",
+    "parents": [
+      [
+        "サービス",
+        "/service/"
+      ],
+      [
+        "IT・DXサービス",
+        "/service/it-dx/"
+      ]
+    ],
+    "class": ""
+  },
+  {
+    "file": "service/it-dx/development/index.html",
+    "title": "システム開発",
+    "description": "業務に合ったシステムの開発・改修・保守を支援。自社開発情報と企業向けの開発支援内容をご紹介します。",
+    "parents": [
+      [
+        "サービス",
+        "/service/"
+      ],
+      [
+        "IT・DXサービス",
+        "/service/it-dx/"
+      ]
+    ],
+    "class": ""
+  },
+  {
+    "file": "cases/index.html",
+    "title": "支援事例・対応領域",
+    "description": "金融・EC・SaaS・ヘルスケアなど、ELEVATEの既存の開発支援例をご紹介します。",
+    "parents": [],
+    "class": ""
+  },
+  {
+    "file": "news/index.html",
+    "title": "お知らせ",
+    "description": "ELEVATEからのお知らせ、会社情報をご案内します。",
+    "parents": [],
+    "class": ""
+  },
+  {
+    "file": "company/index.html",
+    "title": "会社情報",
+    "description": "ELEVATEの事業、企業情報、本社・大阪支社・東京支社をご紹介します。",
+    "parents": [],
+    "class": ""
+  },
+  {
+    "file": "introduction/index.html",
+    "title": "お仕事をお探しの方",
+    "description": "派遣のお仕事とフリーランスエンジニアの案件紹介。希望する働き方からお選びいただけます。",
+    "parents": [],
+    "class": ""
+  },
+  {
+    "file": "introduction/staffing/index.html",
+    "title": "派遣のお仕事紹介",
+    "description": "登録から就業までの流れと、スタッフの雇用支援について。",
+    "parents": [
+      [
+        "お仕事をお探しの方",
+        "/introduction/"
+      ]
+    ],
+    "class": "subpage"
+  },
+  {
+    "file": "introduction/faq/index.html",
+    "title": "よくあるご質問",
+    "description": "お仕事紹介・スタッフ登録に関するよくあるご質問。",
+    "parents": [
+      [
+        "お仕事をお探しの方",
+        "/introduction/"
+      ]
+    ],
+    "class": "subpage"
+  },
+  {
+    "file": "registered/index.html",
+    "title": "登録スタッフの方",
+    "description": "登録済みのスタッフの前払い・交通費申請のご案内。",
+    "parents": [],
+    "class": "subpage"
+  },
+  {
+    "file": "web-registered/index.html",
+    "title": "かんたんWeb登録",
+    "description": "派遣のお仕事をお探しの方のスタッフ登録フォーム。",
+    "parents": [
+      [
+        "お仕事をお探しの方",
+        "/introduction/"
+      ]
+    ],
+    "class": "subpage"
+  },
+  {
+    "file": "advance-payment/index.html",
+    "title": "前払い申請",
+    "description": "登録スタッフ向けの前払い申請フォーム。",
+    "parents": [
+      [
+        "登録スタッフの方",
+        "/registered/"
+      ]
+    ],
+    "class": "subpage"
+  },
+  {
+    "file": "transportation-expenses/index.html",
+    "title": "交通費申請",
+    "description": "登録スタッフ向けの交通費申請フォーム。",
+    "parents": [
+      [
+        "登録スタッフの方",
+        "/registered/"
+      ]
+    ],
+    "class": "subpage"
+  },
+  {
+    "file": "privacy/index.html",
+    "title": "プライバシーポリシー",
+    "description": "ELEVATEの個人情報の取り扱いについて。",
+    "parents": [],
+    "class": "subpage"
+  },
+  {
+    "file": "contact/index.html",
+    "title": "法人のお問い合わせ",
+    "description": "人材サービス・IT・DXサービスのご相談、見積もりのご依頼はこちら。",
+    "parents": [],
+    "class": "subpage"
+  },
+  {
+    "file": "lp/index.html",
+    "title": "フリーランスエンジニアの案件紹介",
+    "description": "フリーランスエンジニア向けの案件紹介、キャリア支援、面談のお申し込み。",
+    "parents": [
+      [
+        "お仕事をお探しの方",
+        "/introduction/"
+      ]
+    ],
+    "class": "subpage subpage--lp"
+  }
+]

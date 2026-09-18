@@ -3,51 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>前払い申請フォーム | ELEVATE</title>
-  <meta name="description" content="ELEVATEの前払い申請フォームページです。">
-  <link rel="stylesheet" href="../commn/css/common.css">
-  <link rel="stylesheet" href="../commn/css/site-shell.css">
-  <script src="../commn/js/common.js" defer></script>
+  <title>前払い申請 | 株式会社ELEVATE</title>
+  <meta name="description" content="登録スタッフ向けの前払い申請フォーム。">
+  <meta name="theme-color" content="#4a0097">
   <link rel="stylesheet" href="../commn/css/subpages.css">
+  <link rel="stylesheet" href="../commn/css/site.css">
+  <script src="../commn/js/site.js" defer></script>
   <script src="../commn/js/subpages.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へスキップ</a>
-  <header class="top-header">
-    <div class="top-header__inner">
-      <a class="brand hover-image" href="../index.html" aria-label="ELEVATE トップページ">
-        <img src="../images/common/logo.png" alt="ELEVATE">
-      </a>
-      <nav class="global-nav" id="global-nav" aria-label="メインナビゲーション">
-        <a href="../service/index.html" class="hover-underline" data-menu-number="01">サービス内容</a>
-        <a href="../introduction/index.html" class="hover-underline" data-menu-number="02">お仕事紹介をご希望の方</a>
-        <a href="../company/index.html" class="hover-underline" data-menu-number="03">会社情報</a>
-        <a href="../registered/index.html" class="hover-underline" data-menu-number="04" aria-current="page">登録スタッフの方</a>
-        <div class="mobile-menu-actions">
-          <a class="mobile-menu-cta" href="../web-registered/index.html">かんたんWeb登録 <span aria-hidden="true">↗</span></a>
-          <a class="mobile-menu-contact" href="../contact/index.html">お問い合わせ <span aria-hidden="true">→</span></a>
-          <div class="mobile-menu-bottom">
-            <a href="../privacy/index.html">プライバシーポリシー</a>
-          </div>
-        </div>
-      </nav>
-      <div class="header-actions">
-        <a class="header-button hover-fade" href="../contact/index.html">お問い合わせ <span>→</span></a>
-        <a class="header-button header-button--solid hover-fade" href="../web-registered/index.html">かんたんWeb登録 <span>→</span></a>
-        <button class="menu-button hover-fade" type="button" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開く" data-menu-button>
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-  <nav class="breadcrumb" aria-label="パンくずリスト">
-    <ol class="breadcrumb__list">
-      <li class="breadcrumb__item"><a class="hover-underline" href="../index.html">HOME</a></li>
-      <li class="breadcrumb__item"><a class="hover-underline" href="../registered/index.html">登録スタッフの方</a></li>
-      <li class="breadcrumb__item"><span aria-current="page">前払い申請フォーム</span></li>
-    </ol>
-  </nav>
-  <main class="subpage" id="main">
+  <header class="site-header">
+      <div class="header-utility wrap"><span>人材とITで、企業の成長を支える。</span><div><a href="../introduction/index.html" class="">お仕事をお探しの方</a><a href="../registered/index.html" class="">登録スタッフの方</a></div></div>
+      <div class="header-main wrap"><a href="../index.html" class="site-brand"><img src="../images/common/logo.png" alt="ELEVATE" width="174" height="48"></a>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav"><span>MENU</span><i aria-hidden="true"></i></button>
+      <nav class="site-nav" id="site-nav" aria-label="メインナビゲーション">
+        <div class="service-menu"><a class="service-fallback" href="../service/index.html">サービス一覧</a><button type="button" data-service-toggle aria-expanded="false" aria-controls="service-menu">サービス <span aria-hidden="true">＋</span></button>
+        <div class="mega-menu" id="service-menu" hidden><div class="mega-intro"><p class="eyebrow">OUR SERVICES</p><p>人材とIT。<br>課題に合う支援を。</p><a href="../service/index.html" class="">サービス全体を見る →</a></div><div class="mega-group"><a href="../service/hr/index.html" class="mega-title">人材サービス</a><a href="../service/hr/staffing/index.html" class="">人材派遣</a><a href="../service/hr/recruitment/index.html" class="">人材紹介</a><a href="../service/hr/outsourcing/index.html" class="">業務請負</a></div><div class="mega-group"><a href="../service/it-dx/index.html" class="mega-title">IT・DXサービス</a><a href="../service/it-dx/engineering/index.html" class="">システムエンジニアリング</a><a href="../service/it-dx/ai/index.html" class="">AI導入サービス</a><a href="../service/it-dx/development/index.html" class="">システム開発</a></div></div></div>
+        <a href="../cases/index.html" class="nav-link">支援事例</a><a href="../company/index.html" class="nav-link">会社情報</a><a href="../news/index.html" class="nav-link">お知らせ</a>
+        <a href="../contact/index.html" class="button button-small">法人のご相談 <span aria-hidden="true">↗</span></a>
+        <div class="nav-audience"><p>お仕事をお探しの方・登録済みの方</p><a href="../introduction/index.html" class="">お仕事をお探しの方 →</a><a href="../web-registered/index.html" class="">かんたんWeb登録 →</a><a href="../registered/index.html" class="">登録スタッフの方 →</a></div>
+      </nav></div></header>
+  <nav class="breadcrumbs wrap" aria-label="パンくずリスト"><ol><li><a href="../index.html" class="">TOP</a></li><li><a href="../registered/index.html" class="">登録スタッフの方</a></li><li><span aria-current="page">前払い申請</span></li></ol></nav>
+  <main id="main" class="subpage" tabindex="-1">
 
       <section id="form">
         <div class="head03 head01--cnt subpage-hero" style="--page-photo: url(../images/top/elevate/sky-blue.jpg)">
@@ -66,14 +44,18 @@
     <div class="form__main">
 
       <div class="form__block">
-        <label class="form__ttl form__ttl--require" for="field-0-0" id="field-label-0"><em>氏名</em></label>
+        <label class="form__ttl form__ttl--require" for="field-0-0" id="field-label-0">
+<em>氏名</em>
+</label>
         <div class="form__item">
           <input aria-labelledby="field-label-0" class="form__input form__input--min" id="field-0-0" name="name" placeholder="例）山田太郎" required="" type="text" value=""/>
                   </div>
       </div>
 
       <div class="form__block">
-        <label class="form__ttl form__ttl--require" for="field-1-0" id="field-label-1"><em>ID</em></label>
+        <label class="form__ttl form__ttl--require" for="field-1-0" id="field-label-1">
+<em>ID</em>
+</label>
         <div class="form__item">
           <input aria-labelledby="field-label-1" class="form__input form__input--min" id="field-1-0" name="id" placeholder="例）12345" required="" type="text" value=""/>
           <p class="form__item-comment">※ID未取得の方は、「00000」と入力ください</p>
@@ -81,14 +63,19 @@
       </div>
 
       <div class="form__block">
-        <label class="form__ttl form__ttl--require" for="field-2-0" id="field-label-2"><em>日付・勤務先</em></label>
+        <label class="form__ttl form__ttl--require" for="field-2-0" id="field-label-2">
+<em>日付・勤務先</em>
+</label>
         <div class="form__item">
-          <textarea aria-labelledby="field-label-2" class="form__textarea" id="field-2-0" name="message" placeholder="例）12月17日○○会社、12月18日△△会社" required=""></textarea>
+          <textarea aria-labelledby="field-label-2" class="form__textarea" id="field-2-0" name="message" placeholder="例）12月17日○○会社、12月18日△△会社" required="">
+</textarea>
                   </div>
       </div>
 
       <div class="form__block">
-        <label class="form__ttl form__ttl--require" for="field-3-0" id="field-label-3"><em>何日分</em></label>
+        <label class="form__ttl form__ttl--require" for="field-3-0" id="field-label-3">
+<em>何日分</em>
+</label>
         <div class="form__item">
           <div class="form__address form__address--sbs">
             <input aria-labelledby="field-label-3" class="form__input form__input-postal p-postal-code" id="field-3-0" name="days" placeholder="" required="" type="text" value=""/>
@@ -98,14 +85,18 @@
       </div>
 
       <div class="form__block">
-        <label class="form__ttl form__ttl--require" for="field-4-0" id="field-label-4"><em>メールアドレス</em></label>
+        <label class="form__ttl form__ttl--require" for="field-4-0" id="field-label-4">
+<em>メールアドレス</em>
+</label>
         <div class="form__item">
           <input aria-labelledby="field-label-4" class="form__input" id="field-4-0" name="email" placeholder="例）example@example.com" required="" type="email" value=""/>
                   </div>
       </div>
 
       <div class="form__block">
-        <label class="form__ttl" for="field-5-0" id="field-label-5"><em>勤務証明、<br/>公共機関証明の添付</em></label>
+        <label class="form__ttl" for="field-5-0" id="field-label-5">
+<em>勤務証明、<br/>公共機関証明の添付</em>
+</label>
         <div class="form__item">
           <input accept=".jpg,.jpeg,.png,.pdf,.heic" aria-labelledby="field-label-5" class="form__input form__input--notbg" id="field-5-0" name="attachment1" type="file"/>
                     <input accept=".jpg,.jpeg,.png,.pdf,.heic" aria-labelledby="field-label-5" class="form__input form__input--notbg" id="field-5-1" name="attachment2" type="file"/>
@@ -118,73 +109,49 @@
       </div>
 
       <div class="form__block">
-        <label class="form__ttl form__ttl--require" for="field-6-0" id="field-label-6"><em>給与前払いの<br/>受け取り方法の確認</em></label>
+        <label class="form__ttl form__ttl--require" for="field-6-0" id="field-label-6">
+<em>給与前払いの<br/>受け取り方法の確認</em>
+</label>
         <div class="form__item form__item--checks">
-          <label class="form__check"><input aria-labelledby="field-label-6" id="field-6-0" name="checkbox01" required="" type="checkbox" value="同意する"/> 同意する</label>          <p class="form__item-comment">※長期シフトの方は月初から5日間分は保険関係などの控除のため前払いはできません。<br/>※遅刻、早退は当日分、理由の証明できない当日欠勤は（5日間）前払いはできません。</p>
+          <label class="form__check">
+<input aria-labelledby="field-label-6" id="field-6-0" name="checkbox01" required="" type="checkbox" value="同意する"/> 同意する</label>          <p class="form__item-comment">※長期シフトの方は月初から5日間分は保険関係などの控除のため前払いはできません。<br/>※遅刻、早退は当日分、理由の証明できない当日欠勤は（5日間）前払いはできません。</p>
                   </div>
       </div>
 
       <div class="form-policy">
                 <p class="form-policy__desc">個人情報の取り扱いについて<a class="form-policy__link" href="../privacy/index.html" rel="noopener noreferrer" target="_blank">プライバシーポリシー</a>をご確認頂き、同意の上送信してください。</p>
-        <label class="form-policy__check"><input name="policy_chk" required="" type="checkbox" value="1"/><span class="form-policy__agree">同意する</span></label>
-        <div class="form-policy__error"></div>
+        <label class="form-policy__check">
+<input name="policy_chk" required="" type="checkbox" value="1"/>
+<span class="form-policy__agree">同意する</span>
+</label>
+        <div class="form-policy__error">
+</div>
       </div>
 
       <div class="form-button-area">
         <input name="send_flg" type="hidden" value="1"/>
         <button class="btn02 form__btn" name="enter" type="submit" value="確認画面へ進む">確認画面へ進む<svg class="ico_svg ico_right" fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-<path class="svg-path" d="M2.0633 9.06385L10.9281 9.06381L7.73908 12.2528L9.24337 13.7571L15.0002 8.00023L9.24341 2.24341L7.73912 3.74771L10.9281 6.93666H2.06334L2.0633 9.06385Z" fill="#4a0097"></path>
+<path class="svg-path" d="M2.0633 9.06385L10.9281 9.06381L7.73908 12.2528L9.24337 13.7571L15.0002 8.00023L9.24341 2.24341L7.73912 3.74771L10.9281 6.93666H2.06334L2.0633 9.06385Z" fill="#4a0097">
+</path>
 </svg>
 </button>
       </div>
 
-</div></form>                  </div>
-      </div></section>
+</div>
+</form>                  </div>
+      </div>
+</section>
 
 
 
-    </main>
-  <footer class="top-footer">
-    <div class="top-footer__inner">
-      <div class="footer-brand">
-        <a class="brand brand--light hover-image" href="../index.html">
-          <img src="../images/common/logo.png" alt="ELEVATE">
-        </a>
-        <p>〒595-0072 大阪府泉大津市松之浜町1丁目1-10-3F<br>TEL:0120-334-335 / 0725-20-0140</p>
-      </div>
-      <div class="footer-column">
-        <h2>サービス内容</h2>
-        <a href="../service/staffing/index.html" class="hover-underline">・総合人材派遣サービス</a>
-        <a href="../service/engineering/index.html" class="hover-underline">・システムエンジニアリングサービス</a>
-      </div>
-      <div class="footer-column">
-        <h2>お仕事紹介をご希望の方</h2>
-        <a href="../introduction/staffing/index.html" class="hover-underline">・総合人材派遣サービス</a>
-        <a href="https://elevate-works.jp/lp/" class="hover-underline footer-external-link" target="_blank" rel="noopener noreferrer" aria-label="ELEVATE（別タブで開く）">・ELEVATE
-          <svg class="footer-external-icon" viewBox="0 0 16 16" aria-hidden="true">
-            <path d="M6 3H3v10h10v-3M8 3h5v5M13 3 7 9" />
-          </svg>
-        </a>
-        <a href="../introduction/faq/index.html" class="hover-underline">・よくあるご質問</a>
-      </div>
-      <div class="footer-column">
-        <h2>登録スタッフの方</h2>
-        <a href="../advance-payment/index.html" class="hover-underline">・前払い申請フォーム</a>
-        <a href="../transportation-expenses/index.html" class="hover-underline">・交通費申請フォーム</a>
-      </div>
-      <div class="footer-column">
-        <h2>お問い合わせ</h2>
-        <a href="../web-registered/index.html" class="hover-underline">・かんたんWeb登録</a>
-      </div>
-      <div class="footer-bottom">
-        <small>© <span data-current-year>2026</span> ELEVATE. All Rights Reserved.</small>
-        <div>
-          <a href="../company/index.html" class="hover-underline">会社概要</a>
-          <span>|</span>
-          <a href="../privacy/index.html" class="hover-underline">プライバシーポリシー</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    <div class="wrap return-link">
+<a class="text-link" href="../registered/index.html">登録スタッフ向けのご案内に戻る →</a>
+</div>
+</main>
+  <footer class="site-footer"><div class="wrap"><div class="footer-top"><div><a href="../index.html" class="site-brand"><img src="../images/common/logo.png" alt="ELEVATE" width="174" height="48"></a><p>人の力と技術力。<br>働く未来を創造する。</p><small>〒595-0072<br>大阪府泉大津市松之浜町1丁目1-10-3F</small></div>
+    <div class="footer-group"><a href="../service/hr/index.html" class="mega-title">人材サービス</a><a href="../service/hr/staffing/index.html" class="">人材派遣</a><a href="../service/hr/recruitment/index.html" class="">人材紹介</a><a href="../service/hr/outsourcing/index.html" class="">業務請負</a></div><div class="footer-group"><a href="../service/it-dx/index.html" class="mega-title">IT・DXサービス</a><a href="../service/it-dx/engineering/index.html" class="">システムエンジニアリング</a><a href="../service/it-dx/ai/index.html" class="">AI導入サービス</a><a href="../service/it-dx/development/index.html" class="">システム開発</a></div>
+    <div class="footer-group"><a href="../company/index.html" class="mega-title">会社情報</a><a href="../cases/index.html" class="">支援事例</a><a href="../news/index.html" class="">お知らせ</a><a href="../contact/index.html" class="">法人のお問い合わせ</a><a href="../introduction/index.html" class="">お仕事をお探しの方</a><a href="../registered/index.html" class="">登録スタッフの方</a></div></div>
+    <div class="footer-bottom"><a href="../privacy/index.html" class="">プライバシーポリシー</a><small>© <span data-year>2026</span> ELEVATE Co., Ltd.</small></div></div></footer>
+  <button class="to-top" type="button" aria-label="ページ上部へ戻る" hidden><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="21" pathLength="100"/></svg><span aria-hidden="true">↑<small>TOP</small></span></button>
 </body>
 </html>

@@ -1,0 +1,122 @@
+
+
+      <section id="form">
+        <div class="head03 head01--cnt subpage-hero" style="--page-photo: url(/images/top/elevate/sky-blue.jpg)">
+          <p class="head03-ttl__sub">登録スタッフの方</p>
+          <h1 class="head03-ttl">前払い申請フォーム</h1>
+        </div>
+        <div class="inner inner--gray innner-form mt70-w mt100-n">
+
+          <div class="form-lead">
+  <p class="form-lead__txt">給料の前払いをご希望の方は、専用フォームより必要事項をご入力のうえ、申請手続きを行ってください。<br/>申請内容を確認後、順次対応させていただきます。</p>
+</div>
+
+<div class="form-cnt">
+    <form action="https://elevate-works.jp/advance-payment/" class="h-adr" enctype="multipart/form-data" method="post" name="mainForm">
+    <span class="p-country-name" style="display:none;">Japan</span>
+    <div class="form__main">
+
+      <div class="form__block">
+        <label class="form__ttl form__ttl--require" for="field-0-0" id="field-label-0">
+<em>氏名</em>
+</label>
+        <div class="form__item">
+          <input aria-labelledby="field-label-0" class="form__input form__input--min" id="field-0-0" name="name" placeholder="例）山田太郎" required="" type="text" value=""/>
+                  </div>
+      </div>
+
+      <div class="form__block">
+        <label class="form__ttl form__ttl--require" for="field-1-0" id="field-label-1">
+<em>ID</em>
+</label>
+        <div class="form__item">
+          <input aria-labelledby="field-label-1" class="form__input form__input--min" id="field-1-0" name="id" placeholder="例）12345" required="" type="text" value=""/>
+          <p class="form__item-comment">※ID未取得の方は、「00000」と入力ください</p>
+                  </div>
+      </div>
+
+      <div class="form__block">
+        <label class="form__ttl form__ttl--require" for="field-2-0" id="field-label-2">
+<em>日付・勤務先</em>
+</label>
+        <div class="form__item">
+          <textarea aria-labelledby="field-label-2" class="form__textarea" id="field-2-0" name="message" placeholder="例）12月17日○○会社、12月18日△△会社" required="">
+</textarea>
+                  </div>
+      </div>
+
+      <div class="form__block">
+        <label class="form__ttl form__ttl--require" for="field-3-0" id="field-label-3">
+<em>何日分</em>
+</label>
+        <div class="form__item">
+          <div class="form__address form__address--sbs">
+            <input aria-labelledby="field-label-3" class="form__input form__input-postal p-postal-code" id="field-3-0" name="days" placeholder="" required="" type="text" value=""/>
+            <p class="form__input-postal-txt">日分</p>
+                      </div>
+        </div>
+      </div>
+
+      <div class="form__block">
+        <label class="form__ttl form__ttl--require" for="field-4-0" id="field-label-4">
+<em>メールアドレス</em>
+</label>
+        <div class="form__item">
+          <input aria-labelledby="field-label-4" class="form__input" id="field-4-0" name="email" placeholder="例）example@example.com" required="" type="email" value=""/>
+                  </div>
+      </div>
+
+      <div class="form__block">
+        <label class="form__ttl" for="field-5-0" id="field-label-5">
+<em>勤務証明、<br/>公共機関証明の添付</em>
+</label>
+        <div class="form__item">
+          <input accept=".jpg,.jpeg,.png,.pdf,.heic" aria-labelledby="field-label-5" class="form__input form__input--notbg" id="field-5-0" name="attachment1" type="file"/>
+                    <input accept=".jpg,.jpeg,.png,.pdf,.heic" aria-labelledby="field-label-5" class="form__input form__input--notbg" id="field-5-1" name="attachment2" type="file"/>
+                    <p class="form__item-comment">
+            ※切符（ICOCAなどの場合は、駅などでもらえる利用証明）の画像を添付してください。<br/>
+            ※ファイル容量は、5MBまででお願いします。<br/>
+            ※ファイル形式は、（JPEG、PNG、PDF、HEIC）のいずれかでお願いします。
+          </p>
+        </div>
+      </div>
+
+      <div class="form__block">
+        <label class="form__ttl form__ttl--require" for="field-6-0" id="field-label-6">
+<em>給与前払いの<br/>受け取り方法の確認</em>
+</label>
+        <div class="form__item form__item--checks">
+          <label class="form__check">
+<input aria-labelledby="field-label-6" id="field-6-0" name="checkbox01" required="" type="checkbox" value="同意する"/> 同意する</label>          <p class="form__item-comment">※長期シフトの方は月初から5日間分は保険関係などの控除のため前払いはできません。<br/>※遅刻、早退は当日分、理由の証明できない当日欠勤は（5日間）前払いはできません。</p>
+                  </div>
+      </div>
+
+      <div class="form-policy">
+                <p class="form-policy__desc">個人情報の取り扱いについて<a class="form-policy__link" href="/privacy/index.html" rel="noopener noreferrer" target="_blank">プライバシーポリシー</a>をご確認頂き、同意の上送信してください。</p>
+        <label class="form-policy__check">
+<input name="policy_chk" required="" type="checkbox" value="1"/>
+<span class="form-policy__agree">同意する</span>
+</label>
+        <div class="form-policy__error">
+</div>
+      </div>
+
+      <div class="form-button-area">
+        <input name="send_flg" type="hidden" value="1"/>
+        <button class="btn02 form__btn" name="enter" type="submit" value="確認画面へ進む">確認画面へ進む<svg class="ico_svg ico_right" fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-path" d="M2.0633 9.06385L10.9281 9.06381L7.73908 12.2528L9.24337 13.7571L15.0002 8.00023L9.24341 2.24341L7.73912 3.74771L10.9281 6.93666H2.06334L2.0633 9.06385Z" fill="#4a0097">
+</path>
+</svg>
+</button>
+      </div>
+
+</div>
+</form>                  </div>
+      </div>
+</section>
+
+
+
+    <div class="wrap return-link">
+<a class="text-link" href="/registered/">登録スタッフ向けのご案内に戻る →</a>
+</div>
