@@ -141,6 +141,103 @@
 </a>
 </div>
 </section>
+<section class="section interview-section" aria-labelledby="interview-title">
+<div class="wrap">
+<div class="interview-heading">
+<div class="section-heading">
+<p class="eyebrow">INTERVIEW</p>
+<h2 id="interview-title">仕事の先にある、価値をつくる人。</h2>
+</div>
+<p class="interview-heading__note"><span>PEOPLE / 001—003</span>ELEVATEで働くメンバーの視点から、仕事とチームの現在地を紹介します。</p>
+</div>
+<div class="interview-slider" role="region" aria-roledescription="カルーセル" aria-label="社員インタビュー">
+<div class="interview-grid" id="interview-track" tabindex="0" aria-label="左右の矢印キーでインタビューを切り替え">
+<article class="interview-card">
+<a href="#interview-dialog" data-interview="01" aria-haspopup="dialog" aria-label="山田太郎のインタビューを読む">
+<div class="interview-card__media"><img src="images/top/interview-01.png" alt="システムエンジニアの山田太郎" loading="lazy"></div>
+<div class="interview-card__content">
+<p class="interview-card__id"><span>INTERVIEW</span><b>01</b></p>
+<p class="interview-card__role">ENGINEER / JOINED 2022</p>
+<h3>技術を追うだけではなく、<br>その先の価値までつくっていく。</h3>
+<p class="interview-card__person">システムエンジニア <strong>山田 太郎</strong></p>
+<span class="interview-card__link">READ INTERVIEW <i aria-hidden="true">→</i></span>
+</div>
+</a>
+</article>
+<article class="interview-card">
+<a href="#interview-dialog" data-interview="02" aria-haspopup="dialog" aria-label="佐藤美咲のインタビューを読む">
+<div class="interview-card__media"><img src="images/top/interview-02.png" alt="キャリアコーディネーターの佐藤美咲" loading="lazy"></div>
+<div class="interview-card__content">
+<p class="interview-card__id"><span>INTERVIEW</span><b>02</b></p>
+<p class="interview-card__role">COORDINATOR / JOINED 2021</p>
+<h3>人と企業の間に立ち、<br>双方の前進を支えていく。</h3>
+<p class="interview-card__person">キャリアコーディネーター <strong>佐藤 美咲</strong></p>
+<span class="interview-card__link">READ INTERVIEW <i aria-hidden="true">→</i></span>
+</div>
+</a>
+</article>
+<article class="interview-card">
+<a href="#interview-dialog" data-interview="03" aria-haspopup="dialog" aria-label="鈴木健のインタビューを読む">
+<div class="interview-card__media"><img src="images/top/interview-03.png" alt="DXコンサルタントの鈴木健" loading="lazy"></div>
+<div class="interview-card__content">
+<p class="interview-card__id"><span>INTERVIEW</span><b>03</b></p>
+<p class="interview-card__role">DX CONSULTANT / JOINED 2023</p>
+<h3>現場に入り、変化が続く<br>仕組みまで設計する。</h3>
+<p class="interview-card__person">DXコンサルタント <strong>鈴木 健</strong></p>
+<span class="interview-card__link">READ INTERVIEW <i aria-hidden="true">→</i></span>
+</div>
+</a>
+</article>
+</div>
+<div class="interview-controls" hidden>
+<p class="interview-counter" aria-live="polite" aria-atomic="true"><span data-interview-current>01</span> / 03</p>
+<div class="interview-dots" aria-label="表示するインタビュー"><button type="button" data-slide="0" aria-label="インタビュー01を表示" aria-current="true"></button><button type="button" data-slide="1" aria-label="インタビュー02を表示"></button><button type="button" data-slide="2" aria-label="インタビュー03を表示"></button></div>
+<button type="button" class="interview-arrow" data-slide-prev aria-controls="interview-track" aria-label="前のインタビュー">←</button>
+<button type="button" class="interview-arrow" data-slide-next aria-controls="interview-track" aria-label="次のインタビュー">→</button>
+</div>
+</div>
+</div>
+</section>
+<dialog class="interview-dialog" id="interview-dialog" aria-labelledby="interview-dialog-title">
+<div class="interview-dialog__toolbar"><span>PEOPLE AT ELEVATE</span><button type="button" data-interview-close autofocus aria-label="インタビューを閉じる">CLOSE ×</button></div>
+<div class="interview-dialog__body" data-interview-body></div>
+</dialog>
+<template id="interview-story-01">
+<p class="eyebrow">INTERVIEW 01 / ENGINEER</p>
+<h2 data-interview-title>技術を追うだけではなく、<br>その先の価値までつくっていく。</h2>
+<p class="interview-dialog__profile">システムエンジニア　山田 太郎 / 2022年入社</p>
+<img src="images/top/interview-01.png" alt="山田太郎のインタビューイメージ" width="2172" height="724">
+<h3>いま、どんな仕事に取り組んでいますか？</h3>
+<p>企業の業務を支えるシステムの開発に取り組んでいます。仕様を実装するだけでなく、使う人がどの場面で困っているのかを知ることから始めています。小さな操作の改善でも、毎日の仕事が変わる。その手応えが、この仕事の面白さです。</p>
+<h3>開発で大切にしていることは？</h3>
+<p>技術の新しさと、現場に合うかどうかを分けて考えることです。チームで意見を交わし、運用や引き継ぎまで想像して設計する。誰か一人しか分からない仕組みにしないことも、品質の一部だと考えています。</p>
+<h3>これから挑戦したいことを教えてください。</h3>
+<p>課題を整理する段階から関わり、技術で何を変えられるかを提案できるエンジニアになりたいです。学んだことをチームへ共有しながら、使い続けてもらえる仕組みをつくっていきたいと思っています。</p>
+</template>
+<template id="interview-story-02">
+<p class="eyebrow">INTERVIEW 02 / COORDINATOR</p>
+<h2 data-interview-title>人と企業の間に立ち、<br>双方の前進を支えていく。</h2>
+<p class="interview-dialog__profile">キャリアコーディネーター　佐藤 美咲 / 2021年入社</p>
+<img src="images/top/interview-02.png" alt="佐藤美咲のインタビューイメージ" width="2172" height="724">
+<h3>仕事で大切にしていることは？</h3>
+<p>条件だけでは分からない、その人が大切にしていることを聞くようにしています。企業にも現場の雰囲気や仕事の進め方を伺い、お互いが無理なく力を発揮できる接点を探しています。</p>
+<h3>やりがいを感じるのは、どんな瞬間ですか？</h3>
+<p>就業後に「できる仕事が増えた」と聞けたときです。紹介して終わりではなく、働き始めてからの不安を一緒に整理する。小さな変化を見逃さずに関わることが、信頼につながると感じています。</p>
+<h3>これから、どんな支援をしていきたいですか？</h3>
+<p>一人ひとりの経験や希望を、次の可能性につなげる支援です。企業の課題にも丁寧に向き合い、働く人と現場の両方にとって、前向きな選択を増やしていきたいと思っています。</p>
+</template>
+<template id="interview-story-03">
+<p class="eyebrow">INTERVIEW 03 / DX CONSULTANT</p>
+<h2 data-interview-title>現場に入り、変化が続く<br>仕組みまで設計する。</h2>
+<p class="interview-dialog__profile">DXコンサルタント　鈴木 健 / 2023年入社</p>
+<img src="images/top/interview-03.png" alt="鈴木健のインタビューイメージ" width="2172" height="724">
+<h3>プロジェクトは何から始めますか？</h3>
+<p>実際の仕事の流れを見せてもらうことから始めます。どこで手が止まり、何度も同じ作業が発生するのか。現場の方と一緒に整理することで、取り組むべき課題が具体的になっていきます。</p>
+<h3>技術の導入で意識していることは？</h3>
+<p>まず小さく試し、使う人の声を聞いて改善することです。ツールが動くだけでは十分ではありません。使い方の共有や運用ルールまで整えることで、日々の仕事の中に自然に組み込まれる状態を目指しています。</p>
+<h3>これから実現したいことは？</h3>
+<p>支援が終わった後も、現場で改善を続けられる仕組みを残すことです。技術と人の間をつなぎ、一緒に考え、一緒につくる。その積み重ねで、企業の次の挑戦を支えていきたいです。</p>
+</template>
 <section class="section">
 <div class="wrap">
 <div class="people-panel">

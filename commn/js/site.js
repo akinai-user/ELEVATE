@@ -153,6 +153,96 @@
     validate();
   }
 
+  // Native scroll snapping and dialog keep touch, keyboard and modal focus behavior local.
+  const interviewTrack = document.querySelector("#interview-track");
+  const interviewDialog = document.querySelector("#interview-dialog");
+  if (interviewTrack && interviewDialog) {
+    const cards = [...interviewTrack.querySelectorAll(".interview-card")];
+    const controls = document.querySelector(".interview-controls");
+    const previous = controls.querySelector("[data-slide-prev]");
+    const next = controls.querySelector("[data-slide-next]");
+    const dots = [...controls.querySelectorAll("[data-slide]")];
+    const counter = controls.querySelector("[data-interview-current]");
+    const body = interviewDialog.querySelector("[data-interview-body]");
+    let active = 0;
+    let opener = null;
+    let savedBodyStyle = null;
+    let savedScroll = 0;
+    let scrollFrame = 0;
+    const position = card => card.getBoundingClientRect().left - interviewTrack.getBoundingClientRect().left + interviewTrack.scrollLeft;
+    const sync = () => {
+      scrollFrame = 0;
+      active = cards.reduce((closest, card, index) => Math.abs(position(card) - interviewTrack.scrollLeft) < Math.abs(position(cards[closest]) - interviewTrack.scrollLeft) ? index : closest, 0);
+      previous.disabled = active === 0;
+      next.disabled = active === cards.length - 1;
+      counter.textContent = String(active + 1).padStart(2, "0");
+      dots.forEach((dot, index) => {
+        if (index === active) dot.setAttribute("aria-current", "true");
+        else dot.removeAttribute("aria-current");
+      });
+    };
+    const go = index => {
+      active = Math.max(0, Math.min(cards.length - 1, index));
+      interviewTrack.scrollTo({ left: position(cards[active]), behavior: reduced.matches ? "auto" : "smooth" });
+    };
+    previous.addEventListener("click", () => go(active - 1));
+    next.addEventListener("click", () => go(active + 1));
+    dots.forEach(dot => dot.addEventListener("click", () => go(Number(dot.dataset.slide))));
+    interviewTrack.addEventListener("scroll", () => {
+      if (!scrollFrame) scrollFrame = requestAnimationFrame(sync);
+    }, { passive: true });
+    interviewTrack.addEventListener("keydown", event => {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+      const focusedCard = event.target.closest(".interview-card");
+      const start = focusedCard ? cards.indexOf(focusedCard) : active;
+      const index = event.key === "Home" ? 0 : event.key === "End" ? cards.length - 1 : start + (event.key === "ArrowRight" ? 1 : -1);
+      go(index);
+      if (focusedCard) cards[active].querySelector("a").focus({ preventScroll: true });
+    });
+    if ("ResizeObserver" in window) new ResizeObserver(() => go(active)).observe(interviewTrack);
+    controls.hidden = false;
+    sync();
+    interviewTrack.addEventListener("click", event => {
+      const trigger = event.target.closest("[data-interview]");
+      if (!trigger) return;
+      const story = document.getElementById(`interview-story-${trigger.dataset.interview}`);
+      if (!story) return;
+      event.preventDefault();
+      opener = trigger;
+      body.replaceChildren(story.content.cloneNode(true));
+      body.querySelector("[data-interview-title]").id = "interview-dialog-title";
+      savedScroll = window.scrollY;
+      savedBodyStyle = document.body.getAttribute("style");
+      const scrollbar = window.innerWidth - document.documentElement.clientWidth;
+      const padding = parseFloat(getComputedStyle(document.body).paddingRight) || 0;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${savedScroll}px`;
+      document.body.style.width = "100%";
+      document.body.style.paddingRight = `${padding + scrollbar}px`;
+      interviewDialog.showModal();
+      interviewDialog.scrollTop = 0;
+    });
+    interviewDialog.querySelector("[data-interview-close]").addEventListener("click", () => interviewDialog.close());
+    let backdropPress = false;
+    const outside = event => {
+      const bounds = interviewDialog.getBoundingClientRect();
+      return event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom;
+    };
+    interviewDialog.addEventListener("pointerdown", event => { backdropPress = outside(event); });
+    interviewDialog.addEventListener("click", event => {
+      if (backdropPress && outside(event)) interviewDialog.close();
+      backdropPress = false;
+    });
+    interviewDialog.addEventListener("close", () => {
+      if (savedBodyStyle === null) document.body.removeAttribute("style");
+      else document.body.setAttribute("style", savedBodyStyle);
+      window.scrollTo({ top: savedScroll, behavior: "instant" });
+      opener?.focus({ preventScroll: true });
+    });
+    window.addEventListener("pagehide", () => { if (interviewDialog.open) interviewDialog.close(); });
+  }
+
   // One-shot reveals. No scroll listeners, text splitting or animation dependencies.
   if ("IntersectionObserver" in window && !reduced.matches) {
     const selectors = [
@@ -161,6 +251,8 @@
       ".people-panel > img", ".people-panel > div > *", ".news-list article",
       ".company-band > *", ".contact-band .wrap > *", ".page-intro > *",
       ".career-card", ".steps > li", ".section .wrap > .text-link",
+      ".interview-heading > *", ".interview-slider", ".service-visual__media", ".service-visual__panel", ".service-interface",
+      ".ai-log", ".ai-solution", ".ai-industry", ".ai-reason", ".ai-process", ".ai-handover", ".ai-pricing__detail",
       ".subpage-hero > *", ".subpage .inner > h2", ".subpage .boxlist__item",
       ".subpage .steplist__item", ".subpage .introduction__item",
       ".subpage--lp .p-intro > h2", ".subpage--lp .p-intro__item",
@@ -190,7 +282,7 @@
     }, { threshold: 0, rootMargin: "0px 0px -24px 0px" });
     targets.forEach(element => {
       if (element.matches(".eyebrow, h1, h2, .head01-ttl__en, .head02-ttl__en")) element.classList.add("reveal-title");
-      if (element.matches(".hero-visual, .people-panel > img")) element.classList.add("reveal-image");
+      if (element.matches(".hero-visual, .people-panel > img, .service-visual__media, .service-interface")) element.classList.add("reveal-image");
       const siblings = [...element.parentElement.children].filter(child => candidateSet.has(child));
       element.style.setProperty("--reveal-delay", `${Math.min(siblings.indexOf(element), 2) * 85}ms`);
       // Critical first-screen content stays painted; only offscreen elements start hidden.
