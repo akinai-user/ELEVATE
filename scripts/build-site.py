@@ -10,7 +10,8 @@ PAGES=json.loads((ROOT/'content/pages.json').read_text())
 REDIRECTS=json.loads((ROOT/'content/redirects.json').read_text())
 def link(url,label,cls='',current=None):
     selected=' aria-current="page"' if url==current else ''
-    return f'<a href="{url}" class="{cls}"{selected}>{label}</a>'
+    class_attr=f' class="{cls}"' if cls else ''
+    return f'<a href="{url}"{class_attr}{selected}>{label}</a>'
 def group_links(group,current=None):
     root='/service/'+group['slug']+'/'
     return link(root,group['title'],'mega-title',current)+''.join(link(root+s['slug']+'/',s['title'],'',current) for s in group['services'])
@@ -55,7 +56,8 @@ for page in PAGES:
     content=(ROOT/'content/pages'/path).read_text().replace('<!-- SERVICE_PANELS -->',service_panels())
     crumbs=[link('/','TOP')]+[link(url,label) for label,url in page.get('parents',[])]+[f'<span aria-current="page">{escape(page["title"])}</span>']
     breadcrumb='' if path=='index.html' else '<nav class="breadcrumbs wrap" aria-label="パンくずリスト"><ol>'+''.join('<li>'+c+'</li>' for c in crumbs)+'</ol></nav>'
-    html=Template((ROOT/'templates/layout.html').read_text()).substitute(title=escape(page['title']+' | 株式会社ELEVATE'),description=escape(page['description']),header=header(current),footer=footer(),breadcrumb=breadcrumb,main_class=page.get('class',''),content=content)
+    main_class=f' class="{page["class"]}"' if page.get('class') else ''
+    html=Template((ROOT/'templates/layout.html').read_text()).substitute(title=escape(page['title']+' | 株式会社ELEVATE'),description=escape(page['description']),header=header(current),footer=footer(),breadcrumb=breadcrumb,main_class=main_class,content=content)
     target=ROOT/path;target.parent.mkdir(parents=True,exist_ok=True);target.write_text("\n".join(line.rstrip() for line in relative_links(html,path).splitlines())+"\n")
 for old,new in REDIRECTS.items():
     dest=posixpath.relpath(new,posixpath.dirname(old));target=ROOT/old

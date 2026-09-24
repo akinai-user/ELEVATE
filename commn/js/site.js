@@ -251,13 +251,10 @@
       ".people-panel > img", ".people-panel > div > *", ".news-list article",
       ".company-band > *", ".contact-band .wrap > *", ".page-intro > *",
       ".career-card", ".steps > li", ".section .wrap > .text-link",
-      ".interview-heading > *", ".interview-slider", ".service-visual__media", ".service-visual__panel", ".service-interface",
+      ".interview-heading > *", ".interview-slider", ".service-visual__media", ".service-visual__panel",
       ".ai-log", ".ai-solution", ".ai-industry", ".ai-reason", ".ai-process", ".ai-handover", ".ai-pricing__detail",
       ".subpage-hero > *", ".subpage .inner > h2", ".subpage .boxlist__item",
-      ".subpage .steplist__item", ".subpage .introduction__item",
-      ".subpage--lp .p-intro > h2", ".subpage--lp .p-intro__item",
-      ".subpage--lp .p-features__item", ".subpage--lp .p-features__item02",
-      ".subpage--lp .p-features__item03", ".subpage--lp .p-flow__list-item"
+      ".subpage .steplist__item", ".subpage .introduction__item"
     ].join(", ");
     const candidates = [...document.querySelectorAll(selectors)];
     const candidateSet = new Set(candidates);
@@ -282,7 +279,7 @@
     }, { threshold: 0, rootMargin: "0px 0px -24px 0px" });
     targets.forEach(element => {
       if (element.matches(".eyebrow, h1, h2, .head01-ttl__en, .head02-ttl__en")) element.classList.add("reveal-title");
-      if (element.matches(".hero-visual, .people-panel > img, .service-visual__media, .service-interface")) element.classList.add("reveal-image");
+      if (element.matches(".hero-visual, .people-panel > img, .service-visual__media")) element.classList.add("reveal-image");
       const siblings = [...element.parentElement.children].filter(child => candidateSet.has(child));
       element.style.setProperty("--reveal-delay", `${Math.min(siblings.indexOf(element), 2) * 85}ms`);
       // Critical first-screen content stays painted; only offscreen elements start hidden.

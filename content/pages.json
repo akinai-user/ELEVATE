@@ -3,15 +3,13 @@
     "file": "index.html",
     "title": "人材サービスとIT・DXで企業を支援",
     "description": "人材派遣・人材紹介・業務請負、システムエンジニアリング・AI導入・システム開発。ELEVATEは人材とIT・DXの2事業で企業の成長を支援します。",
-    "parents": [],
-    "class": ""
+    "parents": []
   },
   {
     "file": "service/index.html",
     "title": "サービス",
     "description": "人材とIT・DXの2事業・6サービスを、企業の課題から選べます。",
-    "parents": [],
-    "class": ""
+    "parents": []
   },
   {
     "file": "service/hr/index.html",
@@ -22,8 +20,7 @@
         "サービス",
         "/service/"
       ]
-    ],
-    "class": ""
+    ]
   },
   {
     "file": "service/it-dx/index.html",
@@ -34,8 +31,7 @@
         "サービス",
         "/service/"
       ]
-    ],
-    "class": ""
+    ]
   },
   {
     "file": "service/hr/staffing/index.html",
@@ -50,8 +46,7 @@
         "人材サービス",
         "/service/hr/"
       ]
-    ],
-    "class": ""
+    ]
   },
   {
     "file": "service/hr/recruitment/index.html",
@@ -66,8 +61,7 @@
         "人材サービス",
         "/service/hr/"
       ]
-    ],
-    "class": ""
+    ]
   },
   {
     "file": "service/hr/outsourcing/index.html",
@@ -82,8 +76,7 @@
         "人材サービス",
         "/service/hr/"
       ]
-    ],
-    "class": ""
+    ]
   },
   {
     "file": "service/it-dx/engineering/index.html",
@@ -98,8 +91,7 @@
         "IT・DXサービス",
         "/service/it-dx/"
       ]
-    ],
-    "class": ""
+    ]
   },
   {
     "file": "service/it-dx/ai/index.html",
@@ -114,8 +106,7 @@
         "IT・DXサービス",
         "/service/it-dx/"
       ]
-    ],
-    "class": ""
+    ]
   },
   {
     "file": "service/it-dx/development/index.html",
@@ -130,36 +121,31 @@
         "IT・DXサービス",
         "/service/it-dx/"
       ]
-    ],
-    "class": ""
+    ]
   },
   {
     "file": "cases/index.html",
     "title": "支援事例・対応領域",
     "description": "金融・EC・SaaS・ヘルスケアなど、ELEVATEの既存の開発支援例をご紹介します。",
-    "parents": [],
-    "class": ""
+    "parents": []
   },
   {
     "file": "news/index.html",
     "title": "お知らせ",
     "description": "ELEVATEからのお知らせ、会社情報をご案内します。",
-    "parents": [],
-    "class": ""
+    "parents": []
   },
   {
     "file": "company/index.html",
     "title": "会社情報",
     "description": "ELEVATEの事業、企業情報、本社・大阪支社・東京支社をご紹介します。",
-    "parents": [],
-    "class": ""
+    "parents": []
   },
   {
     "file": "introduction/index.html",
     "title": "お仕事をお探しの方",
     "description": "派遣のお仕事とフリーランスエンジニアの案件紹介。希望する働き方からお選びいただけます。",
-    "parents": [],
-    "class": ""
+    "parents": []
   },
   {
     "file": "introduction/staffing/index.html",
