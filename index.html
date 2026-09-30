@@ -3,11 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches &&
+          'IntersectionObserver' in window && Element.prototype.animate) {
+        document.documentElement.classList.add('motion-booting');
+        window.addEventListener('load', () => document.documentElement.classList.remove('motion-booting'), { once: true });
+      }
+    </script>
     <title>ELEVATE | 人の力とテクノロジーで、働く未来を創造する。</title>
     <meta
       name="description"
       content="人材事業とDX事業を通じて、人とテクノロジーの可能性をつなぐELEVATEの公式サイトです。"
     />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <meta property="og:title" content="株式会社ELEVATE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elevate-works.jp/" />
+    <meta property="og:site_name" content="株式会社ELEVATE" />
+    <meta property="og:description" content="人材派遣・業務請負・人材紹介、システムエンジニアリングサービスを提供する株式会社ELEVATE。企業の成長を支える最適な人材と解決策をご提案します。大阪・東京を拠点に、DX事業も展開中です。" />
+    <meta property="og:image" content="https://elevate-works.jp/images/common/ogp.png" />
+    <meta name="twitter:card" content="summary" />
     <link rel="preload" as="image" href="images/top/hero-slide-01.webp" fetchpriority="high" />
     <link rel="stylesheet" href="commn/css/common.css" />
     <link rel="stylesheet" href="commn/css/site-shell.css" />
@@ -53,10 +68,11 @@
           aria-label="メインナビゲーション"
         >
           <a href="service/index.html" class="hover-underline" data-menu-number="01">サービス内容</a
-          ><a href="introduction/index.html" class="hover-underline" data-menu-number="02"
+          ><a href="https://note.com/elevate" class="hover-underline" data-menu-number="02" target="_blank" rel="noopener noreferrer">事例紹介</a
+          ><a href="introduction/index.html" class="hover-underline" data-menu-number="03"
             >お仕事紹介をご希望の方</a
-          ><a href="company/index.html" class="hover-underline" data-menu-number="03">会社情報</a
-          ><a href="registered/index.html" class="hover-underline" data-menu-number="04"
+          ><a href="company/index.html" class="hover-underline" data-menu-number="04">会社情報</a
+          ><a href="registered/index.html" class="hover-underline" data-menu-number="05"
             >登録スタッフの方</a
           >
           <div class="mobile-menu-actions">

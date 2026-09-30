@@ -50,6 +50,13 @@
   transform-origin: left center;
   backface-visibility: hidden;
 }
+html.motion-booting body {
+  visibility: hidden;
+}
+main .motion-reveal-pending,
+main .motion-hero-pending {
+  opacity: 0;
+}
 .motion-magnetic {
   --magnetic-x: 0px;
   --magnetic-y: 0px;

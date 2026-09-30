@@ -200,6 +200,7 @@
     if (reducedMotion.matches || !("IntersectionObserver" in window) || !Element.prototype.animate) return;
 
     const animations = new Set();
+    const pending = new Set();
     const directions = new WeakMap();
     const observer = new IntersectionObserver((entries) => {
       let order = 0;
@@ -217,20 +218,26 @@
             duration: 850,
             delay: Math.min(order++ * 65, 195),
             easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-            fill: "backwards",
+            fill: "both",
           },
         );
         animations.add(animation);
-        animation.addEventListener("finish", () => animations.delete(animation), { once: true });
+        animation.addEventListener("finish", () => {
+          entry.target.classList.remove("motion-reveal-pending");
+          pending.delete(entry.target);
+          animations.delete(animation);
+          animation.cancel();
+        }, { once: true });
       });
     }, { threshold: 0.08 });
 
-    const observe = () => {
-      const candidates = document.querySelectorAll(
+    const candidates = [];
+    const prepare = () => {
+      const elements = document.querySelectorAll(
         "main [data-reveal], main h2, main h3, main p, main img, main .advance-form__row",
       );
       let index = 0;
-      candidates.forEach((element) => {
+      elements.forEach((element) => {
         // 親子を同時に動かさず、カードや文章のまとまりを保つ。
         if (element.closest("dialog, .swiper-wrapper, .visually-hidden, [aria-hidden='true']") ||
             element.parentElement.closest("[data-reveal]")) return;
@@ -238,18 +245,21 @@
             element.parentElement.closest(".advance-form__row")) return;
         directions.set(element, element.dataset.reveal === "right" ? 44 :
           element.dataset.reveal === "left" ? -44 : index++ % 2 ? 44 : -44);
-        observer.observe(element);
+        element.classList.add("motion-reveal-pending");
+        pending.add(element);
+        candidates.push(element);
       });
     };
     const observeWhenReady = () => {
       if (document.body.matches(".is-loading, .is-page-entering")) return;
-      observe();
+      candidates.forEach((element) => observer.observe(element));
     };
+    prepare();
     if (document.body.matches(".is-loading, .is-page-entering")) {
       document.addEventListener("elevate:opening-complete", observeWhenReady, { once: true });
       document.addEventListener("elevate:page-transition-complete", observeWhenReady, { once: true });
     } else {
-      observe();
+      observeWhenReady();
     }
 
     reducedMotion.addEventListener("change", (event) => {
@@ -257,6 +267,8 @@
       observer.disconnect();
       animations.forEach((animation) => animation.cancel());
       animations.clear();
+      pending.forEach((element) => element.classList.remove("motion-reveal-pending"));
+      pending.clear();
     });
   };
 
@@ -266,6 +278,7 @@
     if (!title || reducedMotion.matches || !Element.prototype.animate) return;
 
     let animation;
+    title.classList.add("motion-hero-pending");
     const play = () => {
       if (animation) return;
       title.classList.add("motion-hero-title");
@@ -278,9 +291,13 @@
           duration: 1150,
           delay: 120,
           easing: "cubic-bezier(0.16, 1, 0.3, 1)",
-          fill: "backwards",
+          fill: "both",
         },
       );
+      animation.addEventListener("finish", () => {
+        title.classList.remove("motion-hero-pending");
+        animation.cancel();
+      }, { once: true });
     };
 
     const playWhenReady = () => {
@@ -296,6 +313,7 @@
     reducedMotion.addEventListener("change", (event) => {
       if (!event.matches) return;
       animation?.cancel();
+      title.classList.remove("motion-hero-pending");
       title.classList.remove("motion-hero-title");
     }, { once: true });
   };
@@ -822,4 +840,5 @@
   initPointerParallax();
   initPointerEffects();
   initScrollMotion();
+  document.documentElement.classList.remove("motion-booting");
 })();
